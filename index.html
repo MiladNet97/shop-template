@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--====== ↓ Website Title ↓ ======-->
+  <title>آکادمی</title>
+  <!--====== ↓ Styles ↓ ======-->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Theme Color Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#00a0dc">
+  <!-- Theme Color Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#00a0dc">
+  <!-- Theme Color iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#00a0dc">
+  <!--====== ↓ Favicon ↓ ======-->
+  <link rel="icon" href="assets/images/favicon.png">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <div class="cart-message"></div>
+  <!--======= ↓ Start Header ↓ =======-->
+  <header id="main-header">
+    <!-- header shape -->
+    <div class="shape-top">
+      <svg viewBox="150 155 600 600" width="100%">
+        <defs>
+          <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color: rgb(196, 224, 229);"></stop>
+            <stop offset="100%" style="stop-color: rgb(179, 229, 252);"></stop>
+          </linearGradient>
+        </defs>
+        <path id="blob"
+          d="M437,280Q396,310,379,336Q362,362,348,407Q334,452,292,436.5Q250,421,214,422.5Q178,424,128,423Q78,422,76.5,372.5Q75,323,58,286.5Q41,250,44,208Q47,166,94.5,154Q142,142,163,115.5Q184,89,217,68Q250,47,293,45Q336,43,359.5,80Q383,117,409.5,145Q436,173,457,211.5Q478,250,437,280Z"
+          fill="url(#gradient)"></path>
+
+      </svg>
+    </div>
+
+    <!-- start navbar -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+
+          <nav id="main-navbar"
+            class="navbar navbar-light navbar-expand-lg bg--brand mt-3 main-navbar rounded-pill px-lg-4">
+
+
+            <button class="navbar-toggler p-0" type="button" data-toggle="collapse" data-target="#navbarText"
+              aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <!-- <span class="navbar-toggler-icon"></span> -->
+              <div class="navbar-toggler__icon">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
+            </button> <!-- button -->
+
+            <a class="navbar-brand navbar__logo order-lg-0 d-flex" href="index.html"><img src="assets/images/logo.png"
+                alt="logo" class="w-100"></a>
+
+            <div class="d-flex justify-content-center align-items-center order-lg-2">
+              <div class="pl-md-4 border-left border-secondary">
+                <a href="login.html"
+                  class="navbar__account btn btn--brand d-flex justify-content-center align-items-center">
+                  <span class="pl-2 d-none d-md-flex">ورود / عضویت</span>
+                  <i class="fas fa-user"></i>
+                </a>
+              </div>
+
+              <div class="navbar__basket pr-4 position-relative">
+                <a href="#">
+                  <i class="fas fa-shopping-cart navbar__basket--icon"></i>
+                  <span class="badge navbar__basket--count"></span>
+                </a>
+
+                <div class="navbar__basket--content bg--brand text-center">
+                  <div
+                    class="navbar__basket--content-header d-flex justify-content-between align-items-center px-3 mb-2">
+                    <span class="navbar__basket--content-count"></span>
+                    <a href="cart.html" class="btn navbar__basket--content-link position-relative shadow-none">مشاهده
+                      سبد
+                      خرید</a>
+                  </div>
+                  <ul class="navbar__basket--content-body" class="d-flex flex-column pr-3"></ul>
+                </div> <!-- navbar__basket--content -->
+              </div> <!-- navbar__basket -->
+            </div> <!-- d-flex -->
+
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav ml-auto mx-auto order-lg-1">
+                <li class="nav-item navbar__item active">
+                  <a class="nav-link navbar__link" href="index.html">خانه <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item navbar__item">
+                  <a class="nav-link navbar__link" href="products.html">دوره ها</a>
+                </li>
+                <li class="nav-item navbar__item">
+                  <a class="nav-link navbar__link" href="blog.html">مقالات</a>
+                </li>
+                <li class="nav-item navbar__item">
+                  <a class="nav-link navbar__link" href="#">تماس با ما</a>
+                </li>
+                <li class="nav-item navbar__item">
+                  <a class="nav-link navbar__link" href="#">درباره ما</a>
+                </li>
+              </ul>
+
+
+            </div>
+
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header> <!-- main-header -->
+  <!--======== ↑ End Header ↑ ========-->
+
+  <!--======= ↓ Start Main ↓ =======-->
+  <main class="flex-grow-1">
+    <!--======= ↓ Start Sub Header ↓ =======-->
+    <section id="sub-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+
+            <div class="sub-header__title  d-flex flex-column justify-content-center align-items-center text-center">
+              <h2>با دوره های آکادمی حرفه ای شوید</h2>
+              <p> با بهترین دوره های آموزشی پیش شما هستیم </p>
+            </div>
+
+            <div class="sub-header__search d-flex mx-auto w-75">
+              <input type="search" class="form-control  sub-header__search--input bg--input"
+                placeholder="جستجو کنید ...">
+              <a href="" class="sub-header__search--btn btn--brand-2"><i class="fas fa-search text-white"></i></a
+                href="">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section> <!-- sub-header -->
+    <!--======== ↑ End Sub Header ↑ ========-->
+
+    <!--======= ↓ Start Courses  ↓ =======-->
+    <section id="courses">
+      <div class="container">
+        <div class="row">
+          <div class="courses__title mb-4 text-center col-12">
+            <h2 class="pb-3">دوره های آموزش آکادمی</h2>
+          </div> <!-- courses__title -->
+
+          <div class="col-lg-3 col-md-6 col-xs-12 mb-3">
+            <div class="card p-0 bg--brand border-0">
+              <a href="singleProduct.html">
+                <img src="assets/images/courses/course1.png" class="card-img-top courses__list--img" alt="course">
+                <div class="card-body courses__list--body py-2">
+                  <h2 class="card-title courses__list--h2">بهترین زبان های برنامه نویسی برای یادگیری در سال 2021</h2>
+                </div>
+              </a>
+              <div
+                class="card-footer bg--brand shadow-none d-flex justify-content-between align-items-center user-select-none flex-wrap  courses__list--footer">
+                <span class="d-flex align-items-center">
+                  <i class="far fa-clock courses__list--footer-icon"></i>
+                  <span class="pr-1 pt-1">00:51:06</span>
+                </span>
+                <span class="color--brand">رایگان</span>
+              </div>
+            </div> <!-- card -->
+          </div> <!-- col-lg-3 -->
+
+          <div class="col-lg-3 col-md-6 col-xs-12 mb-3">
+            <div class="card p-0 bg--brand border-0">
+              <a href="singleProduct.html">
+                <img src="assets/images/courses/course2.png" class="card-img-top courses__list--img" alt="course">
+                <div class="card-body courses__list--body py-2">
+                  <h2 class="card-title courses__list--h2">آموزش برنامه نویسی اندروید</h2>
+                </div>
+              </a>
+              <div
+                class="card-footer bg--brand shadow-none d-flex justify-content-between align-items-center user-select-none flex-wrap  courses__list--footer">
+                <span class="d-flex align-items-center">
+                  <i class="far fa-clock courses__list--footer-icon"></i>
+                  <span class="pr-1 pt-1">00:21:06</span>
+                </span>
+                <span class="color--brand">220,000</span>
+              </div>
+            </div> <!-- card -->
+          </div> <!-- col-lg-3 -->
+
+          <div class="col-lg-3 col-md-6 col-xs-12 mb-3">
+            <div class="card p-0 bg--brand border-0">
+              <a href="singleProduct.html">
+                <img src="assets/images/courses/course3.png" class="card-img-top courses__list--img" alt="course">
+                <div class="card-body courses__list--body py-2">
+                  <h2 class="card-title courses__list--h2">آموزش برنامه نویسی با کاتلین دوره مقدماتی</h2>
+                </div>
+              </a>
+              <div
+                class="card-footer bg--brand shadow-none d-flex justify-content-between align-items-center user-select-none flex-wrap courses__list--footer">
+                <span class="text-muted d-flex align-items-center">
+                  <i class="far fa-clock courses__list--footer-icon"></i>
+                  <span class="pr-1 pt-1">00:21:06</span>
+                </span>
+                <span class="color--brand">250,000</span>
+              </div>
+            </div> <!-- card -->
+          </div> <!-- col-lg-3 -->
+
+          <div class="col-lg-3 col-md-6 col-xs-12 mb-3">
+            <div class="card p-0 bg--brand border-0">
+              <a href="singleProduct.html">
+                <img src="assets/images/courses/course4.png" class="card-img-top courses__list--img" alt="course">
+                <div class="card-body courses__list--body py-2">
+                  <h2 class="card-title courses__list--h2">آموزش برنامه نویسی با لاراول مقدماتی تا پیشرفته</h2>
+                </div>
+              </a>
+              <div
+                class="card-footer bg--brand shadow-none d-flex justify-content-between align-items-center user-select-none flex-wrap courses__list--footer">
+                <span class="text-muted d-flex align-items-center">
+                  <i class="far fa-clock courses__list--footer-icon"></i>
+                  <span class="pr-1 pt-1">00:21:06</span>
+                </span>
+                <span class="color--brand">رایگان</span>
+              </div>
+            </div> <!-- card -->
+          </div> <!-- col-lg-3 -->
+
+          <div class="col-lg-3 col-md-6 col-xs-12 mb-3">
+            <div class="card p-0 bg--brand border-0">
+              <a href="singleProduct.html">
+                <img src="assets/images/courses/course5.png" class="card-img-top courses__list--img" alt="course">
+                <div class="card-body courses__list--body py-2">
+                  <h2 class="card-title courses__list--h2">آموزش برنامه نویسی با php مقدماتی</h2>
+                </div>
+              </a>
+              <div
+                class="card-footer bg--brand shadow-none d-flex justify-content-between align-items-center user-select-none flex-wrap courses__list--footer">
+                <span class="text-muted d-flex align-items-center">
+                  <i class="far fa-clock courses__list--footer-icon"></i>
+                  <span class="pr-1 pt-1">00:21:06</span>
+                </span>
+                <span class="color--brand">رایگان</span>
+              </div>
+            </div> <!-- card -->
+          </div> <!-- col-lg-3 -->
+
+          <div class="col-lg-3 col-md-6 col-xs-12 mb-3">
+            <div class="card p-0 bg--brand border-0">
+              <a href="singleProduct.html">
+                <img src="assets/images/courses/course6.jpg" class="card-img-top courses__list--img" alt="course">
+                <div class="card-body courses__list--body py-2">
+                  <h2 class="card-title courses__list--h2">آموزش آشنایی با شبکه های اجتماعی</h2>
+                </div>
+              </a>
+              <div
+                class="card-footer bg--brand shadow-none d-flex justify-content-between align-items-center user-select-none flex-wrap courses__list--footer">
+                <span class="text-muted d-flex align-items-center">
+                  <i class="far fa-clock courses__list--footer-icon"></i>
+                  <span class="pr-1 pt-1">00:21:06</span>
+                </span>
+                <span class="color--brand">50,000</span>
+              </div>
+            </div> <!-- card -->
+          </div> <!-- col-lg-3 -->
+
+          <div class="col-lg-3 col-md-6 col-xs-12 mb-3">
+            <div class="card p-0 bg--brand border-0">
+              <a href="singleProduct.html">
+                <img src="assets/images/courses/course7.png" class="card-img-top courses__list--img" alt="course">
+                <div class="card-body courses__list--body py-2">
+                  <h2 class="card-title courses__list--h2">آموزش مقدماتی تا پیشرفته فریم ورک Vue Js</h2>
+                </div>
+              </a>
+              <div
+                class="card-footer bg--brand shadow-none d-flex justify-content-between align-items-center user-select-none flex-wrap courses__list--footer">
+                <span class="text-muted d-flex align-items-center">
+                  <i class="far fa-clock courses__list--footer-icon"></i>
+                  <span class="pr-1 pt-1">00:21:06</span>
+                </span>
+                <span class="color--brand">رایگان</span>
+              </div>
+            </div> <!-- card -->
+          </div> <!-- col-lg-3 -->
+
+          <div class="col-lg-3 col-md-6 col-xs-12 mb-3">
+            <div class="card p-0 bg--brand border-0">
+              <a href="singleProduct.html">
+                <img src="assets/images/courses/course8.png" class="card-img-top courses__list--img" alt="course">
+                <div class="card-body courses__list--body py-2">
+                  <h2 class="card-title courses__list--h2">آموزش امنیت در وردپرس از صفر تا صد</h2>
+                </div>
+              </a>
+              <div
+                class="card-footer bg--brand shadow-none d-flex justify-content-between align-items-center user-select-none flex-wrap courses__list--footer ">
+                <span class="text-muted d-flex align-items-center">
+                  <i class="far fa-clock courses__list--footer-icon"></i>
+                  <span class="pr-1 pt-1">00:21:06</span>
+                </span>
+                <span class="color--brand">165,000</span>
+              </div>
+            </div> <!-- card -->
+          </div> <!-- col-lg-3 -->
+
+        </div> <!-- courses__list -->
+
+
+        <div class="mt-4 d-flex justify-content-center align-items-center">
+          <a href="products.html" class="color--brand show__link d-flex align-items-center">
+            <span class="pl-2 font-weight-bold color--brand">مشاهده دوره ها</span>
+            <i class="fas fa-arrow-left color--brand"></i>
+          </a>
+        </div>
+
+      </div> <!-- container -->
+    </section> <!-- courses -->
+    <!--======== ↑ End Courses  ↑ ========-->
+
+    <!--======= ↓ Start About Us  ↓ =======-->
+    <section id="about-us">
+      <div class="shape-right">
+        <svg viewBox="0 0 300 600" width="100%">
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color: rgb(196, 224, 229);"></stop>
+              <stop offset="100%" style="stop-color: rgb(179, 229, 252);"></stop>
+            </linearGradient>
+          </defs>
+          <path id="blob"
+            d="M341.5,266.5Q351,283,388.5,330.5Q426,378,380,372Q334,366,307.5,355.5Q281,345,265.5,347Q250,349,213,414Q176,479,189.5,397Q203,315,176.5,319Q150,323,99.5,319Q49,315,28.5,282.5Q8,250,78,233.5Q148,217,147,196Q146,175,150,146.5Q154,118,172.5,92.5Q191,67,220.5,73Q250,79,286,53.5Q322,28,312.5,103Q303,178,333.5,172.5Q364,167,424.5,170.5Q485,174,408.5,212Q332,250,341.5,266.5Z"
+            fill="url(#gradient)"></path>
+
+        </svg>
+      </div> <!-- shape-right -->
+
+      <div class="container">
+        <div class="row d-flex align-content-center ">
+          <div class="col-lg-6 col-md-12">
+            <h2 class="about-us__title text-center">ما یک شرکت طراحی وب هستیم</h2>
+            <p class="about-us__text pt-4 text-center">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از
+              طراحان گرافیک است. چاپگرها و متون
+              بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع
+              با هدف بهبود ابزارهای کاربردی می باشد. </p>
+
+            <div class="about-us__skill smt-4 mb-3">
+              <h2 class="about-us__skill--title text-center my-2">مهارت های ما</h2>
+
+              <div class="about-us__skills--item mb-3">
+                <h5 class="d-flex justify-content-between about-us__skills--item-title mb-2">
+                  طراحی وب
+                  <span>90%</span>
+                </h5>
+                <div class="progress rounded-pill about-us__skills--item-progress">
+                  <div class="progress-bar bg-primary rounded-pill about-us__skills--item-progress-bar"
+                    role="progressbar" aria-valuenow="90%"></div>
+                </div>
+              </div> <!-- about-us__skills--item -->
+
+              <div class="about-us__skills--item mb-3">
+                <h5 class="d-flex justify-content-between about-us__skills--item-title mb-2">
+                  سئو
+                  <span>78%</span>
+                </h5>
+                <div class="progress rounded-pill about-us__skills--item-progress">
+                  <div class="progress-bar bg-primary rounded-pill about-us__skills--item-progress-bar"
+                    role="progressbar" aria-valuenow="78%"></div>
+                </div>
+              </div> <!-- about-us__skills--item -->
+
+              <div class="about-us__skills--item mb-3">
+                <h5 class="d-flex justify-content-between about-us__skills--item-title mb-2">
+                  توسعه
+                  <span>85%</span>
+                </h5>
+                <div class="progress rounded-pill about-us__skills--item-progress">
+                  <div class="progress-bar bg-primary rounded-pill about-us__skills--item-progress-bar"
+                    role="progressbar" aria-valuenow="85%"></div>
+                </div>
+              </div> <!-- about-us__skills--item -->
+            </div> <!-- about-us__skills-->
+
+          </div> <!-- col-md-6 -->
+
+          <div class="col-lg-6 col-md-12">
+            <img src="assets/images/Untitled.svg" class="img-fluid" alt="">
+          </div> <!-- col-md-6 -->
+        </div> <!-- row -->
+      </div> <!-- container -->
+    </section> <!-- about-us -->
+    <!--======== ↑ End About Us  ↑ ========-->
+
+    <!--======= ↓ Start Achievements  ↓ =======-->
+    <section id="achievements">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center mb-5">
+            <h2>چرا از خدمات ما استفاده میکنید؟</h2>
+          </div> <!-- col-12 -->
+
+          <div class="achievements__item col-lg-3 col-md-6 col-sm-12 pb-5 text-center">
+            <i class="achievements__item--icon far fa-heart fa-3x"></i>
+            <h2 class="achievements__item--count pt-3" data-count="153">0
+            </h2>
+            <h4 class="achievements__item--title pt-2">مشتریان راضی</h4>
+          </div> <!-- achievements__item -->
+
+          <div class="achievements__item col-lg-3 col-md-6 col-sm-12 pb-5 text-center">
+            <i class="achievements__item--icon fas fa-tasks fa-3x"></i>
+            <h2 class="achievements__item--count pt-3" data-count="313">0
+            </h2>
+            <h4 class="achievements__item--title pt-2">پروژه انجام شده</h4>
+          </div> <!-- achievements__item -->
+
+          <div class="achievements__item col-lg-3 col-md-6 col-sm-12 pb-5 text-center">
+            <i class="achievements__item--icon fas fa-code fa-3x"></i>
+            <h2 class="achievements__item--count pt-3" data-count="6500">
+              0
+            </h2>
+            <h4 class="achievements__item--title pt-2">خط کد</h4>
+          </div> <!-- achievements__item -->
+
+          <div class="achievements__item col-lg-3 col-md-6 col-sm-12 pb-5 text-center">
+            <i class="achievements__item--icon far fa-window-maximize fa-3x"></i>
+            <h2 class="achievements__item--count pt-3" data-count="53">0
+            </h2>
+            <h4 class="achievements__item--title pt-2">قالب رایگان</h4>
+          </div> <!-- achievements__item -->
+
+        </div> <!-- row -->
+      </div> <!-- container -->
+    </section> <!-- achievements -->
+    <!--======== ↑ End Achievements  ↑ ========-->
+
+    <!--======= ↓ Start Blog  ↓ =======-->
+    <section id="blog">
+      <!-- header shape -->
+      <div class="shape-top">
+        <svg viewBox="150 170 500 500" width="100%">
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color: rgb(196, 224, 229);"></stop>
+              <stop offset="100%" style="stop-color: rgb(179, 229, 252);"></stop>
+            </linearGradient>
+          </defs>
+          <path id="blob"
+            d="M414,270Q334,290,352,345Q370,400,325,391.5Q280,383,237.5,437Q195,491,152,459Q109,427,136,359.5Q163,292,111,271Q59,250,96.5,222Q134,194,147,166Q160,138,192.5,139Q225,140,246,157.5Q267,175,325,129.5Q383,84,363.5,144.5Q344,205,419,227.5Q494,250,414,270Z"
+            fill="url(#gradient)"></path>
+        </svg>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="blog__title col-12 text-center">
+            <h2 class="pb-3">آخرین مطالب بلاگ</h2>
+          </div>
+
+          <div class="col-12">
+            <!-- Swiper -->
+            <div class="swiper-container py-5">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide px-4">
+                  <div class="card p-0 bg--brand border-0">
+                    <a href="post.html">
+                      <img src="assets/images/posts/post1.png" class="card-img-top blog__list--img" alt="post">
+                      <div class="card-body blog__list--body py-2">
+                        <h2 class="card-title blog__list--h2">جاوااسکریپت را حرفه ای کد بزن!</h2>
+                      </div>
+                    </a>
+                    <div
+                      class="card-footer bg--brand shadow-none d-flex justify-content-between align-items-center user-select-none flex-wrap blog__list--footer">
+                      <span class="d-flex align-items-center ">
+                        <i class="fa fa-calendar-alt blog__list--footer-icon"></i>
+                        <span class="pr-1 pt-1">1400/02/19</span>
+                      </span>
+                      <a href="post.html" class="rounded btn btn--brand">ادامه مطلب</a>
+                    </div>
+                  </div> <!-- card -->
+                </div> <!-- swiper-slide -->
+
+                <div class="swiper-slide px-4">
+                  <div class="card p-0 bg--brand border-0">
+                    <a href="post.html">
+                      <img src="assets/images/posts/post2.png" class="card-img-top blog__list--img" alt="post">
+                      <div class="card-body blog__list--body py-2">
+                        <h2 class="card-title blog__list--h2">PWA چیست؟ آینده طراحی وب</h2>
+                      </div>
+                    </a>
+                    <div
+                      class="card-footer bg--brand shadow-none d-flex justify-content-between align-items-center user-select-none flex-wrap blog__list--footer">
+                      <span class="d-flex align-items-center ">
+                        <i class="fa fa-calendar-alt blog__list--footer-icon"></i>
+                        <span class="pr-1 pt-1">1400/02/19</span>
+                      </span>
+                      <a href="post.html" class="rounded btn btn--brand">ادامه مطلب</a>
+                    </div>
+                  </div> <!-- card -->
+                </div> <!-- swiper-slide -->
+
+                <div class="swiper-slide px-4">
+                  <div class="card p-0 bg--brand border-0">
+                    <a href="post.html">
+                      <img src="assets/images/posts/post3.png" class="card-img-top blog__list--img" alt="post">
+                      <div class="card-body blog__list--body py-2">
+                        <h2 class="card-title blog__list--h2">چند نکته برای ارسال صحیح Push Notification</h2>
+                      </div>
+                    </a>
+                    <div
+                      class="card-footer bg--brand shadow-none d-flex justify-content-between align-items-center user-select-none flex-wrap blog__list--footer">
+                      <span class="d-flex align-items-center ">
+                        <i class="fa fa-calendar-alt blog__list--footer-icon"></i>
+                        <span class="pr-1 pt-1">1400/02/19</span>
+                      </span>
+                      <a href="post.html" class="rounded btn btn--brand">ادامه مطلب</a>
+                    </div>
+                  </div> <!-- card -->
+                </div> <!-- swiper-slide -->
+
+
+                <div class="swiper-slide px-4">
+                  <div class="card p-0 bg--brand border-0">
+                    <a href="post.html">
+                      <img src="assets/images/posts/post4.png" class="card-img-top blog__list--img" alt="post">
+                      <div class="card-body blog__list--body py-2">
+                        <h2 class="card-title blog__list--h2">آشنایی با 10 کتابخانه جاوااسکریپت</h2>
+                      </div>
+                    </a>
+                    <div
+                      class="card-footer bg--brand shadow-none d-flex justify-content-between align-items-center user-select-none flex-wrap blog__list--footer">
+                      <span class="d-flex align-items-center ">
+                        <i class="fa fa-calendar-alt blog__list--footer-icon"></i>
+                        <span class="pr-1 pt-1">1400/02/19</span>
+                      </span>
+                      <a href="post.html" class="rounded btn btn--brand">ادامه مطلب</a>
+                    </div>
+                  </div> <!-- card -->
+                </div> <!-- swiper-slide -->
+
+                <div class="swiper-slide px-4">
+                  <div class="card p-0 bg--brand border-0">
+                    <a href="post.html">
+                      <img src="assets/images/posts/post5.png" class="card-img-top blog__list--img" alt="post">
+                      <div class="card-body blog__list--body py-2">
+                        <h2 class="card-title blog__list--h2">همه چیز در مورد ورژن 0.60 React Native</h2>
+                      </div>
+                    </a>
+                    <div
+                      class="card-footer bg--brand shadow-none d-flex justify-content-between align-items-center user-select-none flex-wrap blog__list--footer">
+                      <span class="d-flex align-items-center ">
+                        <i class="fa fa-calendar-alt blog__list--footer-icon"></i>
+                        <span class="pr-1 pt-1">1400/02/19</span>
+                      </span>
+                      <a href="post.html" class="rounded btn btn--brand">ادامه مطلب</a>
+                    </div>
+                  </div> <!-- card -->
+                </div> <!-- swiper-slide -->
+
+                <div class="swiper-slide px-4">
+                  <div class="card p-0 bg--brand border-0">
+                    <a href="post.html">
+                      <img src="assets/images/posts/post6.png" class="card-img-top blog__list--img" alt="post">
+                      <div class="card-body blog__list--body py-2">
+                        <h2 class="card-title blog__list--h2">آشنایی با Vue js</h2>
+                      </div>
+                    </a>
+                    <div
+                      class="card-footer bg--brand shadow-none d-flex justify-content-between align-items-center user-select-none flex-wrap blog__list--footer">
+                      <span class="d-flex align-items-center ">
+                        <i class="fa fa-calendar-alt blog__list--footer-icon"></i>
+                        <span class="pr-1 pt-1">1400/02/19</span>
+                      </span>
+                      <a href="post.html" class="rounded btn btn--brand">ادامه مطلب</a>
+                    </div>
+                  </div> <!-- card -->
+                </div> <!-- swiper-slide -->
+
+              </div> <!-- swiper-wrapper -->
+
+              <!-- Add Arrows -->
+              <div class="swiper-button-next d-none d-md-flex"></div>
+              <div class="swiper-button-prev d-none d-md-flex"></div>
+
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+
+            </div> <!-- swiper-container -->
+          </div> <!-- col-12 -->
+
+          <div class="col-12 mt-4 d-flex justify-content-center align-items-center">
+            <a href="blog.html" class="color--brand show__link d-flex align-items-center">
+              <span class="pl-2 font-weight-bold color--brand">مشاهده مطالب</span>
+              <i class="fas fa-arrow-left color--brand"></i>
+            </a>
+          </div> <!-- col-12 -->
+        </div> <!-- row -->
+      </div> <!-- container -->
+    </section> <!-- blog -->
+    <!--======== ↑ End Blog  ↑ ========-->
+  </main>
+  <!--======== ↑ End Main ↑ ========-->
+
+
+  <!--======= ↓ Start Footer  ↓ =======-->
+  <a class="btn btn--brand back-to-top rounded-circle">
+    <i class="fas fa-chevron-up"></i>
+  </a> <!-- Scroll To Top -->
+
+  <footer id="main-footer">
+    <div class="container ">
+      <div class="row py-5">
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="footer__widgets--title pb-3 d-flex align-items-center">درباره آکادمی</h5>
+          <p class="text-justify footer__widgets--text">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
+            با استفاده از طراحان گرافیک است. چاپگرها و متون
+            بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع
+            با هدف بهبود ابزارهای کاربردی می باشد.</p>
+        </div> <!-- col-lg-3 -->
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="footer__widgets--title pb-3 d-flex align-items-center">تماس با آکادمی</h5>
+
+          <ul class="text-break">
+            <li class="d-flex align-items-end mb-1 footer__widgets--link p-2">
+              <i class="fas fa-mobile-alt ml-1"></i>
+              <a href="">0912345678</a>
+            </li>
+            <li class="d-flex align-items-end mb-1 footer__widgets--link p-2">
+              <i class="far fa-envelope ml-1"></i>
+              <a href="mailto:miladshahsavari1@gmail.com">miladshahsavari1@gmail.com</a>
+            </li>
+            <li class="d-flex align-items-end mb-1 footer__widgets--link p-2">
+              <i class="fab fa-chrome ml-1"></i>
+              <a href="http://miladshahsavari.ir">www.miladshahsavari.ir</a>
+            </li>
+
+          </ul>
+
+          <div class="w-75 mx-auto mt-4">
+
+            <ul class="d-flex justify-content-between">
+              <li class="d-flex align-items-center justify-content-between">
+                <a href="#!" class="footer__widgets--link btn btn--brand rounded-pill d-flex p-2"><i
+                    class="fab fa-instagram footer__widgets--icon"></i></a>
+              </li>
+
+              <li class="d-flex align-items-center justify-content-between">
+                <a href="#!" class="footer__widgets--link btn btn--brand rounded-pill d-flex p-2"><i
+                    class="fab fa-telegram-plane footer__widgets--icon"></i></a>
+              </li>
+
+              <li class="d-flex align-items-center justify-content-between">
+                <a href="#!" class="footer__widgets--link btn btn--brand rounded-pill d-flex p-2"> <i
+                    class="fab fa-facebook footer__widgets--icon"></i></a>
+              </li>
+
+              <li class="d-flex align-items-center justify-content-between">
+                <a href="#!" class="footer__widgets--link btn btn--brand rounded-pill d-flex p-2"> <i
+                    class="fab fa-twitter footer__widgets--icon"></i></a>
+              </li>
+            </ul>
+
+          </div>
+        </div> <!-- col-lg-3 -->
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="footer__widgets--title pb-3 d-flex align-items-center">دسترسی سریع</h5>
+          <ul>
+            <li class="mb-1">
+              <a href="" class="footer__widgets--link d-flex align-items-center p-2">آموزش طراحی سایت</a>
+            </li>
+            <li class="mb-1">
+              <a href="products.html" class="footer__widgets--link d-flex align-items-center p-2">دوره ها</a>
+            </li>
+            <li class="mb-1">
+              <a href="" class="footer__widgets--link d-flex align-items-center p-2">قوانین و مقررات</a>
+            </li>
+            <li class="mb-1">
+              <a href="" class="footer__widgets--link d-flex align-items-center p-2">مقالات</a>
+            </li>
+          </ul>
+        </div> <!-- col-lg-3 -->
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <form action="index.html">
+            <h5 class="footer__widgets--title pb-3 d-flex align-items-center">خبرنامه</h5>
+            <p class="footer__widgets--text">برای دریافت آخرین اخبار و تخفیف های آکادمی در خبرنامه عضو شوید</p>
+
+            <div class="input-group my-2">
+              <input class="form-control form-control__edit bg--input px-3 py-3 footer__widgets--input"
+                placeholder="ایمیل خود را وارد کنید" type="email">
+              <div class="input-group-prepend ">
+                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+              </div>
+            </div>
+
+            <input type="submit" class="btn btn-block py-1 btn--brand" value="عضویت">
+          </form>
+        </div> <!-- col-lg-3 -->
+
+      </div> <!-- row -->
+
+      <div class="row">
+        <div class="main-footer__copyright col-12 text-center py-3 text-muted">
+          <p>تمامی حقوق برای این وب سایت محفوظ می باشد</p>
+          <p class="pt-2">طراحی شده توسط <a href="http://miladshahsavari.ir/" target="_blank">میلاد شهسواری</a></p>
+        </div>
+      </div>
+    </div> <!-- container -->
+  </footer> <!-- main-footer -->
+
+  <!--======== ↑ End Footer  ↑ ========-->
+
+
+  <!--================== ↓ Start Scripts ↓ ==================-->
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/fontawesome.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/swiper.js"></script>
+  <script src="assets/js/counter-number.js"></script>
+  <script src="assets/js/script.js"></script>
+  <!--================== ↑ End Scripts ↑ ==================-->
+
+</body>
+
+</html>

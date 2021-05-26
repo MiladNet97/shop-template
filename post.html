@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--====== ↓ Website Title ↓ ======-->
+  <title>آموزش برنامه نویسی با جاوااسکریپت مقدماتی</title>
+  <!--====== ↓ Styles ↓ ======-->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Theme Color Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#00a0dc">
+  <!-- Theme Color Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#00a0dc">
+  <!-- Theme Color iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#00a0dc">
+  <!--====== ↓ Favicon ↓ ======-->
+  <link rel="icon" href="assets/images/favicon.png">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <div class="cart-message"></div>
+  <!--======= ↓ Start Header ↓ =======-->
+  <header id="main-header">
+    <div class="shape-top">
+      <svg viewBox="150 155 600 600" width="100%">
+        <defs>
+          <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color: rgb(196, 224, 229);"></stop>
+            <stop offset="100%" style="stop-color: rgb(179, 229, 252);"></stop>
+          </linearGradient>
+        </defs>
+        <path id="blob"
+          d="M437,280Q396,310,379,336Q362,362,348,407Q334,452,292,436.5Q250,421,214,422.5Q178,424,128,423Q78,422,76.5,372.5Q75,323,58,286.5Q41,250,44,208Q47,166,94.5,154Q142,142,163,115.5Q184,89,217,68Q250,47,293,45Q336,43,359.5,80Q383,117,409.5,145Q436,173,457,211.5Q478,250,437,280Z"
+          fill="url(#gradient)"></path>
+
+      </svg>
+    </div> <!-- shape-top -->
+
+    <!-- start navbar -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav id="main-navbar"
+            class="navbar navbar-light navbar-expand-lg bg--brand mt-3 main-navbar rounded-pill px-lg-4">
+
+
+            <button class="navbar-toggler p-0" type="button" data-toggle="collapse" data-target="#navbarText"
+              aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <!-- <span class="navbar-toggler-icon"></span> -->
+              <div class="navbar-toggler__icon">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
+            </button> <!-- button -->
+
+            <a class="navbar-brand navbar__logo order-lg-0 d-flex" href="index.html"><img src="assets/images/logo.png"
+                alt="logo" class="w-100"></a>
+
+            <div class="d-flex justify-content-center align-items-center order-lg-2">
+              <div class="pl-2 border-left border-secondary">
+                <div class="navbar__account btn d-flex justify-content-center align-items-center position-relative">
+                  <span class="pl-2 font-weight-bold d-none d-lg-flex">پروفایل</span>
+                  <i class="fas fa-user"></i>
+                  <div class="navbar__account--info bg--brand text-center list-group">
+                    <a href="#" class="list-group-item navbar__account--info-list">اعتبار: 50,000 تومان</a>
+                    <a href="profile.html" class="list-group-item navbar__account--info-list">پنل کاربری</a>
+                    <a href="index.html" class="list-group-item navbar__account--info-list d-flex align-items-center">
+                      <i class="fas fa-sign-out-alt ml-1"></i>
+                      خروج</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="navbar__basket pr-4 position-relative">
+                <a href="#">
+                  <i class="fas fa-shopping-cart navbar__basket--icon"></i>
+                  <span class="badge navbar__basket--count"></span>
+                </a>
+
+                <div class="navbar__basket--content bg--brand text-center">
+                  <div
+                    class="navbar__basket--content-header d-flex justify-content-between align-items-center px-3 mb-2">
+                    <span class="navbar__basket--content-count"></span>
+                    <a href="cart.html" class="btn navbar__basket--content-link position-relative shadow-none">مشاهده
+                      سبد
+                      خرید</a>
+                  </div>
+                  <ul class="navbar__basket--content-body" class="d-flex flex-column pr-3"></ul>
+                </div> <!-- navbar__basket--content -->
+              </div> <!-- navbar__basket -->
+            </div> <!-- d-flex -->
+
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav ml-auto mx-auto order-lg-1">
+                <li class="nav-item navbar__item active">
+                  <a class="nav-link navbar__link" href="index.html">خانه <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item navbar__item">
+                  <a class="nav-link navbar__link" href="products.html">دوره ها</a>
+                </li>
+                <li class="nav-item navbar__item">
+                  <a class="nav-link navbar__link" href="blog.html">مقالات</a>
+                </li>
+                <li class="nav-item navbar__item">
+                  <a class="nav-link navbar__link" href="#">تماس با ما</a>
+                </li>
+                <li class="nav-item navbar__item">
+                  <a class="nav-link navbar__link" href="#">درباره ما</a>
+                </li>
+              </ul>
+
+
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header> <!-- main-header -->
+  <!--======== ↑ End Header ↑ ========-->
+
+  <!--======= ↓ Start Main ↓ =======-->
+  <main class="flex-grow-1 my-4">
+    <div class="container">
+      <section class="row">
+        <div class="col-12 mb-2">
+          <h2 class="page__title text-center text-lg-right">آشنایی با 10 کتابخانه جاوااسکریپت</h2>
+        </div> <!-- col-12 -->
+        <div class="col-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-transparent">
+              <li class="breadcrumb-item"><a href="index.html" class="active">خانه</a></li>
+              <li class="breadcrumb-item " aria-current="page"><a href="blog.html" class="active">آرشیو مقالات</a></li>
+              <li class="breadcrumb-item " aria-current="page">آشنایی با 10 کتابخانه جاوااسکریپت</li>
+            </ol>
+          </nav>
+        </div> <!-- col-12 -->
+      </section> <!-- row -->
+
+      <section class="row d-flex flex-column-reverse flex-lg-row">
+        <aside class="col-lg-4 col-12 mb-3 mb-lg-0">
+          <div class="position-sticky sticky-top">
+            <div class="card card-filter bg--brand mb-3">
+              <div class="card-header bg-transparent position-relative">
+                <h5 class="card-filter__title text-right">جستجو در مقالات</h5>
+              </div>
+
+              <div class="card-body card-filter__body">
+                <div class="input-group">
+                  <input class="form-control form-control__edit bg--input px-3 py-3"
+                    placeholder="نام مقاله را بنویسید ..." type="search">
+                  <a class="input-group-prepend" href="#!">
+                    <span class="input-group-text"><i class="fas fa-search"></i></span>
+                  </a>
+                </div>
+              </div>
+
+            </div> <!-- card -->
+
+            <div class="card card-blog bg--brand">
+              <div class="card-header bg-transparent">
+                جدیدترین مقالات
+              </div>
+              <div class="card-body">
+                <div class="list-group">
+                  <a href="#"
+                    class="list-group-item bg-transparent sidebar__item p-1 d-flex align-items-center flex-wrap mb-1">
+                    <div class="ml-2">
+                      <img src="assets/images/posts/post1.png" class="sidebar__img" alt="">
+                    </div>
+                    <div class="d-flex flex-column">
+                      <h2 class="sidebar__title mb-2">جاوااسکریپت را حرفه ای کد بزن!</h2>
+                      <span class="sidebar__date">1400/03/05</span>
+                    </div>
+                  </a>
+                  <a href="#"
+                    class="list-group-item bg-transparent sidebar__item p-1 d-flex align-items-center flex-wrap mb-1">
+                    <div class="ml-2">
+                      <img src="assets/images/posts/post2.png" class="sidebar__img" alt="">
+                    </div>
+                    <div class="d">
+                      <h2 class="sidebar__title mb-2">PWA چیست؟ آینده طراحی وب</h2>
+                      <span class="sidebar__date">1400/02/13</span>
+                    </div>
+                  </a>
+                  <a href="#"
+                    class="list-group-item bg-transparent sidebar__item p-1 d-flex align-items-center flex-wrap mb-1">
+                    <div class="ml-2">
+                      <img src="assets/images/posts/post3.png" class="sidebar__img" alt="">
+                    </div>
+                    <div class="d">
+                      <h2 class="sidebar__title mb-2">چند نکته برای ارسال صحیح Push Notification</h2>
+                      <span class="sidebar__date">1400/03/09</span>
+                    </div>
+                  </a>
+                  <a href="#"
+                    class="list-group-item bg-transparent sidebar__item p-1 d-flex align-items-center flex-wrap mb-1">
+                    <div class="ml-2">
+                      <img src="assets/images/posts/post5.png" class="sidebar__img" alt="">
+                    </div>
+                    <div class="d">
+                      <h2 class="sidebar__title mb-2">همه چیز در مورد ورژن 0.60 React Native</h2>
+                      <span class="sidebar__date">1400/04/10</span>
+                    </div>
+                  </a>
+
+                </div>
+              </div>
+            </div> <!-- card -->
+          </div>
+        </aside>
+
+        <section class="col-lg-8 col-12 mb-3 mb-lg-0">
+          <div class="card card-blog bg--brand mb-3">
+            <div class="card-header bg-transparent d-flex justify-content-center align-items-center flex-wrap">
+              <span class="post__author mb-2 mb-sm-0">
+                <i class="far fa-user"></i>
+                میلاد شهسواری
+              </span>
+              <span class="post__date mx-3 mb-2 mb-sm-0">
+                <i class="far fa-calendar-alt"></i>
+                1400/03/05
+              </span>
+              <span class="post__see mb-2 mb-sm-0">
+                <i class="far fa-eye"></i>
+                2.3k بازدید
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-blog__img mb-2">
+                <img src="assets/images/posts/post4.png" class="w-100" alt="">
+              </div>
+              <div class="card-blog__text">
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                  متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                  کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                  از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان
+                  که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می
+                  باشد. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                  چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+                  نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                </p>
+                <br>
+                <h2 class="font-weight-bold pb-2">جاوااسکریپت چیست؟</h2>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                  متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                  کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                  از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان
+                  که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می
+                  باشد. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                  چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+                  نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                </p>
+                <br>
+                <img src="assets/images/posts/Java-Script..jpg" class="w-100" alt="">
+                <br>
+                <h2 class="font-weight-bold pb-2">چرا جاوااسکریپت؟</h2>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                  متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                  کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                  از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان
+                  که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می
+                  باشد. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                  چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+                  نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                  متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                  کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                  از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان
+                  که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می
+                  باشد. </p>
+              </div> <!-- card-blog__text -->
+            </div>
+          </div> <!-- card -->
+
+          <div class="card card-blog bg--brand mb-3">
+            <div class="card-body d-flex align-items-center flex-wrap py-2">
+              <span class="tags__title d-flex align-items-center m-1">
+                <i class="fas fa-tags ml-2"></i>
+                برچسب ها:
+              </span>
+              <a href="" class="btn btn--brand tags__link m-1">جاوا اسکریپت</a>
+              <a href="" class="btn btn--brand tags__link m-1">ری اکت</a>
+              <a href="" class="btn btn--brand tags__link m-1">آموزش</a>
+              <a href="" class="btn btn--brand tags__link m-1">javascript</a>
+            </div>
+          </div> <!-- card -->
+
+          <div class="card card-blog bg--brand">
+            <div class="card-header bg-transparent d-flex align-items-center">
+              <i class="far fa-comment-alt ml-2 card-header__comment--icon"></i>
+              <h5 class="card-header__comment--title">نظرات </h5>
+            </div>
+
+            <div class="card-body d-flex justify-content-center flex-column">
+              <form action="#" id="comment-form" class="d-flex flex-column flex-grow-1">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputCommentName" class="font-weight-bold">نام شما *</label>
+                    <input type="password" class="form-control bg--input mt-2" id="inputCommentName"
+                      placeholder="مثال: میلاد شهسواری">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputCommentEmail" class="font-weight-bold">ایمیل شما</label>
+                    <input type="email" class="form-control bg--input mt-2 text-left" id="inputCommentEmail"
+                      placeholder="example@company.com" autocomplete="off">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputCommentText" class="font-weight-bold">نظر شما *</label>
+                  <textarea class="form-control bg--input mt-2" id="inputCommentText" rows="7"
+                    placeholder="نظر خود را اینجا بنویسید"></textarea>
+                </div>
+                <button type="submit" class="btn btn--brand-2">ارسال نظر</button>
+              </form>
+
+              <div class="comment-list mt-4">
+                <div class="card comment-list__item bg--brand mb-3">
+                  <div
+                    class="card-header bg-transparent d-flex justify-content-between align-items-center flex-wrap py-2 border-0">
+                    <div class="d-flex align-items-center">
+                      <div class="comment-list__img">
+                        <img src="assets/images/avatar/girl.svg" class="w-100" alt="">
+                      </div>
+                      <div class="comment-list__title mr-2">
+                        <h5 class="mb-2">زهرا</h5>
+                        <small class="font-weight-bold">1400/02/31</small>
+                      </div>
+                    </div>
+
+                    <div class="comment-list__reply">
+                      <a href="#" class="btn btn--brand px-3 py-1 comment-list__reply--btn">پاسخ</a>
+                    </div>
+                  </div>
+
+                  <div class="card-body comment-list__text pt-0 pb-4">
+                    <p>سلام خیلی ممنون مقاله خوبی بود</p>
+                  </div>
+                </div>
+                <div class="card comment-list__item bg--brand mb-3">
+                  <div
+                    class="card-header bg-transparent d-flex justify-content-between align-items-center flex-wrap py-2 border-0">
+                    <div class="d-flex align-items-center">
+                      <div class="comment-list__img">
+                        <img src="assets/images/avatar/man.svg" class="w-100" alt="">
+                      </div>
+                      <div class="comment-list__title mr-2">
+                        <h5 class="mb-2">علی</h5>
+                        <small class="font-weight-bold">1400/01/21</small>
+                      </div>
+                    </div>
+
+                    <div class="comment-list__reply">
+                      <a href="#" class="btn btn--brand px-3 py-1 comment-list__reply--btn">پاسخ</a>
+                    </div>
+                  </div>
+
+                  <div class="card-body comment-list__text pt-0 pb-4">
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                      چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی
+                      مورد
+                      نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
+
+                    <div class="card comment-list__item bg--brand mt-3">
+                      <div
+                        class="card-header bg-transparent d-flex justify-content-between align-items-center flex-wrap py-2 border-0">
+                        <div class="d-flex align-items-center">
+                          <div class="comment-list__img">
+                            <img src="assets/images/avatar/man-2.svg" class="w-100" alt="">
+                          </div>
+                          <div class="comment-list__title mr-2">
+                            <h5 class="mb-2">مدیریت</h5>
+                            <small class="font-weight-bold">1400/02/12</small>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="card-body comment-list__text pt-0 pb-4">
+                        <p>ممنون از نظر شما</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card comment-list__item bg--brand mb-3">
+                  <div
+                    class="card-header bg-transparent d-flex justify-content-between align-items-center flex-wrap py-2 border-0">
+                    <div class="d-flex align-items-center">
+                      <div class="comment-list__img">
+                        <img src="assets/images/avatar/man-3.svg" class="w-100" alt="">
+                      </div>
+                      <div class="comment-list__title mr-2">
+                        <h5 class="mb-2">محمد</h5>
+                        <small class="font-weight-bold">1400/03/05</small>
+                      </div>
+                    </div>
+
+                    <div class="comment-list__reply">
+                      <a href="#" class="btn btn--brand px-3 py-1 comment-list__reply--btn">پاسخ</a>
+                    </div>
+                  </div>
+
+                  <div class="card-body comment-list__text pt-0 pb-4">
+                    <p>سلام مقاله خوبی بود</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div> <!-- card -->
+        </section> <!-- col-8 -->
+
+      </section> <!-- row -->
+    </div>
+
+  </main>
+  <!--======== ↑ End Main ↑ ========-->
+
+
+  <!--======= ↓ Start Footer  ↓ =======-->
+  <a class="btn btn--brand back-to-top rounded-circle">
+    <i class="fas fa-chevron-up"></i>
+  </a> <!-- Scroll To Top -->
+
+  <footer id="main-footer">
+    <div class="container ">
+      <div class="row py-5">
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="footer__widgets--title pb-3 d-flex align-items-center">درباره آکادمی</h5>
+          <p class="text-justify footer__widgets--text">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
+            با استفاده از طراحان گرافیک است. چاپگرها و متون
+            بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع
+            با هدف بهبود ابزارهای کاربردی می باشد.</p>
+        </div> <!-- col-lg-3 -->
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="footer__widgets--title pb-3 d-flex align-items-center">تماس با آکادمی</h5>
+
+          <ul class="text-break">
+            <li class="d-flex align-items-end mb-1 footer__widgets--link p-2">
+              <i class="fas fa-mobile-alt ml-1"></i>
+              <a href="">0912345678</a>
+            </li>
+            <li class="d-flex align-items-end mb-1 footer__widgets--link p-2">
+              <i class="far fa-envelope ml-1"></i>
+              <a href="mailto:miladshahsavari1@gmail.com">miladshahsavari1@gmail.com</a>
+            </li>
+            <li class="d-flex align-items-end mb-1 footer__widgets--link p-2">
+              <i class="fab fa-chrome ml-1"></i>
+              <a href="http://miladshahsavari.ir">www.miladshahsavari.ir</a>
+            </li>
+
+          </ul>
+
+          <div class="w-75 mx-auto mt-4">
+
+            <ul class="d-flex justify-content-between">
+              <li class="d-flex align-items-center justify-content-between">
+                <a href="#!" class="footer__widgets--link btn btn--brand rounded-pill d-flex p-2"><i
+                    class="fab fa-instagram footer__widgets--icon"></i></a>
+              </li>
+
+              <li class="d-flex align-items-center justify-content-between">
+                <a href="#!" class="footer__widgets--link btn btn--brand rounded-pill d-flex p-2"><i
+                    class="fab fa-telegram-plane footer__widgets--icon"></i></a>
+              </li>
+
+              <li class="d-flex align-items-center justify-content-between">
+                <a href="#!" class="footer__widgets--link btn btn--brand rounded-pill d-flex p-2"> <i
+                    class="fab fa-facebook footer__widgets--icon"></i></a>
+              </li>
+
+              <li class="d-flex align-items-center justify-content-between">
+                <a href="#!" class="footer__widgets--link btn btn--brand rounded-pill d-flex p-2"> <i
+                    class="fab fa-twitter footer__widgets--icon"></i></a>
+              </li>
+            </ul>
+
+          </div>
+        </div> <!-- col-lg-3 -->
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="footer__widgets--title pb-3 d-flex align-items-center">دسترسی سریع</h5>
+          <ul>
+            <li class="mb-1">
+              <a href="" class="footer__widgets--link d-flex align-items-center p-2">آموزش طراحی سایت</a>
+            </li>
+            <li class="mb-1">
+              <a href="" class="footer__widgets--link d-flex align-items-center p-2">دوره ها</a>
+            </li>
+            <li class="mb-1">
+              <a href="" class="footer__widgets--link d-flex align-items-center p-2">قوانین و مقررات</a>
+            </li>
+            <li class="mb-1">
+              <a href="" class="footer__widgets--link d-flex align-items-center p-2">مقالات</a>
+            </li>
+          </ul>
+        </div> <!-- col-lg-3 -->
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <form action="index.html">
+            <h5 class="footer__widgets--title pb-3 d-flex align-items-center">خبرنامه</h5>
+            <p class="footer__widgets--text">برای دریافت آخرین اخبار و تخفیف های آکادمی در خبرنامه عضو شوید</p>
+
+            <div class="input-group my-2">
+              <input class="form-control bg--input px-3 py-3 footer__widgets--input"
+                placeholder="ایمیل خود را وارد کنید" type="email">
+              <div class="input-group-prepend ">
+                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+              </div>
+              <!-- <input type="email" class="form-control my-2 bg--input px-3 py-3" placeholder="ایمیل خود را وارد کنید"> -->
+            </div>
+
+            <input type="submit" class="btn btn-block py-1 btn--brand" value="عضویت">
+          </form>
+        </div> <!-- col-lg-3 -->
+
+      </div> <!-- row -->
+
+      <div class="row">
+        <div class="main-footer__copyright col-12 text-center py-3 text-muted">
+          <p>تمامی حقوق برای این وب سایت محفوظ می باشد</p>
+          <p class="pt-2">طراحی شده توسط <a href="http://miladshahsavari.ir/" target="_blank">میلاد شهسواری</a></p>
+        </div>
+      </div>
+    </div> <!-- container -->
+  </footer> <!-- main-footer -->
+
+  <!--======== ↑ End Footer  ↑ ========-->
+
+
+  <!--================== ↓ Start Scripts ↓ ==================-->
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/fontawesome.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  <!--================== ↑ End Scripts ↑ ==================-->
+
+</body>
+
+</html>

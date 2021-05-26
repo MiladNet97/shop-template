@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--====== ↓ Website Title ↓ ======-->
+  <title>آموزش برنامه نویسی با php مقدماتی</title>
+  <!--====== ↓ Styles ↓ ======-->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Theme Color Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#00a0dc">
+  <!-- Theme Color Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#00a0dc">
+  <!-- Theme Color iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#00a0dc">
+  <!--====== ↓ Favicon ↓ ======-->
+  <link rel="icon" href="assets/images/favicon.png">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <div class="cart-message"></div>
+  <!--======= ↓ Start Header ↓ =======-->
+  <header id="main-header">
+    <div class="shape-top">
+      <svg viewBox="150 155 600 600" width="100%">
+        <defs>
+          <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color: rgb(196, 224, 229);"></stop>
+            <stop offset="100%" style="stop-color: rgb(179, 229, 252);"></stop>
+          </linearGradient>
+        </defs>
+        <path id="blob"
+          d="M437,280Q396,310,379,336Q362,362,348,407Q334,452,292,436.5Q250,421,214,422.5Q178,424,128,423Q78,422,76.5,372.5Q75,323,58,286.5Q41,250,44,208Q47,166,94.5,154Q142,142,163,115.5Q184,89,217,68Q250,47,293,45Q336,43,359.5,80Q383,117,409.5,145Q436,173,457,211.5Q478,250,437,280Z"
+          fill="url(#gradient)"></path>
+
+      </svg>
+    </div> <!-- shape-top -->
+
+    <!-- start navbar -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav id="main-navbar"
+            class="navbar navbar-light navbar-expand-lg bg--brand mt-3 main-navbar rounded-pill px-lg-4">
+
+
+            <button class="navbar-toggler p-0" type="button" data-toggle="collapse" data-target="#navbarText"
+              aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <!-- <span class="navbar-toggler-icon"></span> -->
+              <div class="navbar-toggler__icon">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
+            </button> <!-- button -->
+
+            <a class="navbar-brand navbar__logo order-lg-0 d-flex" href="index.html"><img src="assets/images/logo.png"
+                alt="logo" class="w-100"></a>
+
+            <div class="d-flex justify-content-center align-items-center order-lg-2">
+              <div class="pl-2 border-left border-secondary">
+                <div class="navbar__account btn d-flex justify-content-center align-items-center position-relative">
+                  <span class="pl-2 font-weight-bold d-none d-lg-flex">پروفایل</span>
+                  <i class="fas fa-user"></i>
+                  <div class="navbar__account--info bg--brand text-center list-group">
+                    <a href="#" class="list-group-item navbar__account--info-list">اعتبار: 50,000 تومان</a>
+                    <a href="profile.html" class="list-group-item navbar__account--info-list">پنل کاربری</a>
+                    <a href="index.html" class="list-group-item navbar__account--info-list d-flex align-items-center">
+                      <i class="fas fa-sign-out-alt ml-1"></i>
+                      خروج</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="navbar__basket pr-4 position-relative">
+                <a href="#">
+                  <i class="fas fa-shopping-cart navbar__basket--icon"></i>
+                  <span class="badge navbar__basket--count"></span>
+                </a>
+
+                <div class="navbar__basket--content bg--brand text-center">
+                  <div
+                    class="navbar__basket--content-header d-flex justify-content-between align-items-center px-3 mb-2">
+                    <span class="navbar__basket--content-count"></span>
+                    <a href="cart.html" class="btn navbar__basket--content-link position-relative shadow-none">مشاهده
+                      سبد
+                      خرید</a>
+                  </div>
+                  <ul class="navbar__basket--content-body" class="d-flex flex-column pr-3"></ul>
+                </div> <!-- navbar__basket--content -->
+              </div> <!-- navbar__basket -->
+            </div> <!-- d-flex -->
+
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav ml-auto mx-auto order-lg-1">
+                <li class="nav-item navbar__item active">
+                  <a class="nav-link navbar__link" href="#">خانه <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item navbar__item">
+                  <a class="nav-link navbar__link" href="products.html">دوره ها</a>
+                </li>
+                <li class="nav-item navbar__item">
+                  <a class="nav-link navbar__link" href="blog.html">مقالات</a>
+                </li>
+                <li class="nav-item navbar__item">
+                  <a class="nav-link navbar__link" href="#">تماس با ما</a>
+                </li>
+                <li class="nav-item navbar__item">
+                  <a class="nav-link navbar__link" href="#">درباره ما</a>
+                </li>
+              </ul>
+
+
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header> <!-- main-header -->
+  <!--======== ↑ End Header ↑ ========-->
+
+  <!--======= ↓ Start Main ↓ =======-->
+  <main class="flex-grow-1 my-4">
+    <div class="container">
+      <section class="row">
+        <div class="col-12 mb-2">
+          <h2 class="page__title text-center text-lg-right">آموزش برنامه نویسی با php مقدماتی</h2>
+        </div> <!-- col-12 -->
+        <div class="col-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-transparent">
+              <li class="breadcrumb-item"><a href="index.html" class="active">خانه</a></li>
+              <li class="breadcrumb-item " aria-current="page"><a href="products.html" class="active">آرشیو دوره ها</a>
+              </li>
+              <li class="breadcrumb-item " aria-current="page">آموزش برنامه نویسی با php مقدماتی</li>
+            </ol>
+          </nav>
+        </div> <!-- col-12 -->
+      </section> <!-- row -->
+
+      <section class="row">
+        <aside class="col-lg-4 col-12 mb-3 mb-lg-0">
+          <div class="position-sticky sticky-top">
+            <div class="card card-course course-info bg--brand mb-3 ">
+
+              <div
+                class="card-header bg-transparent position-relative d-flex flex-column align-items-center justify-content-center">
+                <div class="course-info__img">
+                  <img src="assets/images/courses/php-course.jpg" class="img-thumbnail" alt="">
+                </div> <!-- course-info__img -->
+
+                <div class="course-info__sell d-flex justify-content-between flex-wrap w-100 mt-3">
+                  <strong>قیمت دوره:</strong>
+                  <p class="course-info__sell--price font-weight-bold">
+                    <span class="course-info__sell--price-amount">129,000</span>
+                    <small>تومان</small>
+                  </p>
+                  <a href="checkout.html"
+                    class="btn btn--brand-2 btn-block mt-4 py-2 course-info__sell--button position-relative"
+                    data-id="1">ثبت نام
+                    دوره</a>
+                </div> <!-- course-info__sell -->
+              </div> <!-- card-header -->
+
+              <div class="card-body">
+                <ul class="list-group">
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-center bg-transparent rounded-0 course-info__item">
+                    <span class="course-info__item--title">
+                      <i class="fal fa-user-graduate course-info__item--icon ml-1"></i> تعداد دانشجویان :
+                    </span>
+                    <span class="course-info__item--value">34 نفر</span>
+                  </li>
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-center bg-transparent rounded-0 course-info__item">
+                    <span class="course-info__item--title">
+                      <i class="fas fa-chalkboard-teacher course-info__item--icon ml-1"></i> جلسات دوره :
+                    </span>
+                    <span class="course-info__item--value">37 جلسه</span>
+                  </li>
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-center bg-transparent rounded-0 course-info__item">
+                    <span class="course-info__item--title">
+                      <i class="fas fa-clock course-info__item--icon ml-1"></i> زمان دوره :
+                    </span>
+                    <span class="course-info__item--value">06:25:35 ساعت</span>
+                  </li>
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-center bg-transparent rounded-0 course-info__item">
+                    <span class="course-info__item--title">
+                      <i class="fas fa-chalkboard-teacher course-info__item--icon ml-1"></i> وضعیت دوره :
+                    </span>
+                    <span class="course-info__item--value">تکمیل شده</span>
+                  </li>
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-center bg-transparent rounded-0 course-info__item">
+                    <span class="course-info__item--title">
+                      <i class="fas fa-spinner course-info__item--icon ml-1"></i> درصد پیشرفت دوره :
+                    </span>
+                    <span class="course-info__item--value">100%</span>
+                  </li>
+                  <div class="progress rounded-pill">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                      aria-valuemax="100" style="width: 100%">100%</div>
+                  </div>
+                </ul>
+              </div> <!-- course-info -->
+
+            </div> <!-- course-info -->
+
+            <div class="card card-course bg--brand">
+              <div class="card-body course-teacher d-flex justify-content-center">
+                <div class="course-teacher__top d-flex align-items-center flex-wrap">
+                  <div class="course-teacher__top--img bg--brand">
+                    <img src="assets/images/avatar/man-1.svg" class="w-100" alt="teacher">
+                  </div>
+                  <div class="course-teacher__top--title mr-2 pb-3">
+                    <h5 class="pb-2">میلاد شهسواری</h5>
+                    <span>مدرس دوره</span>
+                  </div>
+                  <p class="course-teacher__text mt-2">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                    استفاده از طراحان گرافیک است. چاپگرها
+                    و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </aside>
+
+        <section class="col-lg-8 col-12">
+          <div class="card card-course bg--brand mb-3">
+            <div class="card-body">
+              <div class="course__demo position-relative">
+                <video src="assets/images/courses/Western Union U.S Mobile Bill Payments.mp4"
+                  poster="assets/images/courses/php-course.jpg" class="mw-100" controls="controls" type="video/mp4"
+                  id="coursesVideo">متاسفانه مروگر
+                  شما قدیمی است.</video>
+              </div>
+            </div>
+
+          </div> <!-- card -->
+
+          <div class="card card-course bg--brand mb-3">
+            <div class="card-body">
+              <div class="card-course__text">
+                <p>
+                  آموزش php از جمله دوره هایی است که هر برنامه نویس باید ببیند، چرا آموزش زبان برنامه نویسی php؟ شما
+                  با
+                  یه
+                  سرچ ساده در سایت های آگهی استخدامی متوجه این موضوع میشوید که محبوب ترین زبان Back-end در بازار کار
+                  ایران
+                  بی شک زبان پی اچ پی است، شما با یادگیری php میتوانید به راحتی وارد بازار کار شوید، آموزش طراحی سایت
+                  با
+                  php یکی از محبوب ترین آموزش ها برای علاقه مندان به این حوزه می باشد. چون برنامه نویسی php نیاز هر
+                  شرکت
+                  طراحی سایت است. آموزش پروژه محور پی اچ پی سایت آکادمی آی تی جامع بوده و نیاز شما رو از هر اموزش php
+                  دیگری بر طرف میکند.
+                </p>
+                <br>
+                <h2 class="font-weight-bold pb-2">Php چیست؟</h2>
+                <p>
+
+                  Php یکی از زبان های برنامه نویسی سمت سرور است که مخفف کلمات hypertext preprocessor می باشد. زبان php
+                  کاملا رایگان و به اصطلاح opnen source است به این معنا که برای استفاده از آن شما هیچ هزینه ای پرداخت
+                  نمی کنید.
+
+                  این زبان به این دلیل که روی یک سرور اجرا می شود جزء زبان های برنامه نویسی سمت سرور محسوب می شود. این
+                  سرور می تواند سرور واقعی و یا سرور های موجود در لوکال سیستم باشد. توضیحاتی کوتاه برای سوال php چیست؟
+                  که امیدوارم به جواب سوال رسیده باشید. اما اگر ساده تر php چیست؟ را توضیح دهیم در واقع می توان گفت
+                  زبانی یا اسکریپتی سمت سرور که با اتصال به پایگاه داده ی mysql اطلاعات را می توان گرفت و صفحات
+                  داینامیک
+                  سایت را ساخت و به کاربر نشان داد.
+                </p>
+                <br>
+                <img src="assets/images/courses/php.png" class="w-100" alt="">
+                <br>
+                <h2 class="font-weight-bold pb-2">چرا php؟</h2>
+                <p> برای کسانی که به برنامه نویسی سمت سرور یا همان بک اند سایت علاقه دارند این زبان جزء زبان های
+                  پیشنهادی
+                  است چرا که متن باز و دارای سینتکس ساده و کم حجم است. زبان php فریمورک های قدرتمندی نظیر laravel و
+                  codeigniter دارد که استفاده از این زبان را آسان تر می کند. این فریمورک ها علاوه بر قدرتمند بودنشان
+                  امنیت بیشتری نیز به وب سایت ها می دهند. برای php چرا؟ این ویژگی های گفته شده کافیست تا توسعه دهندگان
+                  بیشتری به سمت زبان php روی بیاورند. همچنین php را می توان در پلتفرم های مختلفی نظیر ویندوز، تمامی
+                  توزیع های لینوکس و مکینتاش اجرا کرد. و این اصلی ترین دلیل برای استفاده از زبان php و یا بهترین جواب
+                  به
+                  سوال چرا php؟ می باشد. Php چه نوع زبانی است؟ همان طوری که گفته شد Php یک زبان برنامه نویسی یا
+                  اسکریپت
+                  نویسی سمت سرور که متن باز یا open source است. از ویژگی های دیگر زبان php می توان به مفسری ، سطح بالا
+                  (
+                  high-level ) و شي گرا بودن آن اشاره کرد. اجرای زبان های مفسری به صورت خط به خط است یعنی به یکباره
+                  اجرا
+                  نمی شود. بلکه توسط تفسیر کننده خط اول را بررسی می کند اگر خطایی نداشته باشد. به خط دوم رفته و آن را
+                  نیز بررسی می کند تا اینکه به خط آخر برسد در این صورت با موفقیت اجرا می شود. که برنامه نویسان از آن
+                  بیشتر برای توسعه ی وب اپلیکیشن های داینامیک استفاده می کنند. مسیر یادگیری php برای یادگیری هر زبانی
+                  ابتدا باید دانش پایه ای برنامه نویسی را داشته باشید زبان php هم از جمله ی تمام زبان هاست. با داشتن
+                  دانش اولیه برنامه نویسی شما می توانید هر زبانی را که علاقه دارید به آسانی یاد بگیرید. یادگیری php به
+                  دلیل داشتن سینتکس ساده و سطح بالا بودن آن خیلی آسان است. اگر به برنامه نویسی بک اند سایت علاقه داشته
+                  باشید باید ابتدا کمی با html و css آشنایی داشته باشید. در این صورت برای ارتباط با سمت کاربر مشکلی
+                  نخواهید داشت. </p>
+              </div> <!-- card-course__text -->
+
+              <div id="faq" class="my-5">
+                <div class="row">
+                  <div class="col-12">
+                    <h4 class="badge btn--brand-2 px-3 py-2 user-select-none faq__title">سوالات متداول</h4>
+                  </div>
+                </div> <!-- row -->
+
+                <div class="accordion mt-3 bg--brand" id="accordionCourseFaq">
+                  <div class="card card-accordion bg-transparent">
+                    <div class="card-header card-accordion__header position-relative" id="headingOne">
+                      <h2 class="mb-0">
+                        <button class="btn btn-block text-right shadow-none card-accordion__button" type="button"
+                          data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                          aria-controls="collapseOne">
+                          چرا باید زبان php را بیاموزیم؟
+                        </button>
+                      </h2>
+                    </div> <!-- card-header -->
+
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                      data-parent="#accordionCourseFaq">
+                      <div class="card-body card-accordion__body">
+                        زبان php یکی از پرطرفدارترین زبان های برنامه نویسی در جهان می باشد که درصد بسیار زیادی از وب
+                        سایت ها در ایران و سایر کشور ها با استفاده از این زبان بسیار قدرتمند و متن باز ایجاد و گسترش
+                        پیدا کرده اند، لازم به ذکر است اکثر سیستم های مدیریت محتوا مثل وردپرس، جوملا و ... با استفاده
+                        از
+                        این زبان ایجاد شده اند. همچنین این زبان دارای فریم ورک های بسیار قدرتمندی مانند laravel و
+                        symfony است.
+                      </div>
+                    </div>
+                  </div> <!-- card -->
+
+                  <div class="card card-accordion bg-transparent">
+                    <div class="card-header card-accordion__header" id="headingTwo">
+                      <h2 class="mb-0">
+                        <button class="btn btn-block text-right collapsed shadow-none card-accordion__button"
+                          type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                          aria-controls="collapseTwo">
+                          یادگیری php چه مدت طول میکشید؟
+                        </button>
+                      </h2>
+                    </div> <!-- card-header -->
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                      data-parent="#accordionCourseFaq">
+                      <div class="card-body card-accordion__body">
+                        زمان یادگیری php یا هر زبان برنامه نویسی دیگری بستگی به میزان تلاش، هوش، تجربه و فرآیند
+                        یادگیری دارد و نمی توان زمان خاصی را برای این موضوع مشخص کرد
+                        اما تنها نکته ثابت این است که شما هر چقدر بیشتر تلاش و پشتکار داشته باشید و خودتون رو دگیر
+                        چالش
+                        ها و پروژه های واقعی کنید،زودتر جاوا اسکریپت را یاد خواهید گرفت.
+                      </div>
+                    </div>
+                  </div> <!-- card -->
+
+                  <div class="card card-accordion bg-transparent">
+                    <div class="card-header card-accordion__header" id="headingThree">
+                      <h2 class="mb-0">
+                        <button class="btn btn-block text-right collapsed shadow-none card-accordion__button"
+                          type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                          aria-controls="collapseThree">
+                          این دوره مناسب چه افرادی است؟
+                        </button>
+                      </h2>
+                    </div> <!-- card-header -->
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                      data-parent="#accordionCourseFaq">
+                      <div class="card-body card-accordion__body">
+                        چون در این دوره ما از پایه ترین مفاهیم شروع و در ادامه مفاهیم پیشرفته را بیان می کنیم و پروژه
+                        های مختلفی را پیاده سازی می کنیم
+                        این دوره برای افرادی که مبتدی هستند، یا آشنایی کم یا متوسطی از php دارند،مناسب است.
+                      </div>
+                    </div>
+                  </div> <!-- card -->
+                </div> <!-- accordion -->
+
+              </div> <!-- faq -->
+
+              <div id="chapter" class="my-5">
+                <div class="row">
+                  <div class="col-12">
+                    <h4 class="badge btn--brand-2 px-3 py-2 user-select-none chapter__title">جلسات</h4>
+                  </div>
+                </div>
+
+                <div class="accordion mt-3 bg--brand" id="accordionCourseChapter">
+
+                  <div class="card card-accordion bg-transparent">
+                    <div class="card-header card-accordion__header position-relative" id="headingFour">
+                      <h2 class="mb-0">
+                        <button class="btn btn-block text-right shadow-none card-accordion__button" type="button"
+                          data-toggle="collapse" data-target="#collapseFour" aria-expanded="true"
+                          aria-controls="collapseFour">
+                          معرفی دوره
+                        </button>
+                      </h2>
+                    </div> <!-- card-header -->
+
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                      data-parent="#accordionCourseChapter">
+                      <div class="card-body card-accordion__body">
+
+                        <div class="download-item d-flex justify-content-between align-items-center mb-4 pb-3">
+                          <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center ml-2">
+                              <i class="fas fa-film download-item__icon--film"></i>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                              <div class="d-flex flex-wrap">
+                                <h2 class="download-item__title my-0">1
+                                  . مقدمه </h2>
+                                <span class="download-item__price mr-2">
+                                  رایگان
+                                </span>
+                              </div>
+                              <span class="w-100 text-black-50 font-14 rounded ml-1 font-weight-bold">00:05:08</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <a href="#" rel="nofollow" class="btn btn--brand-2 py-1 px-2 mr-1">
+                              <i class="fas fa-download text-light"></i></a></div>
+                        </div>
+                        <div class="download-item d-flex justify-content-between align-items-center mb-4 pb-3">
+                          <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center ml-2">
+                              <i class="fas fa-film download-item__icon--film"></i>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                              <div class="d-flex flex-wrap">
+                                <h2 class="download-item__title my-0">2
+                                  . قسمت اول </h2>
+                                <span class="download-item__price mr-2">
+                                  رایگان
+                                </span>
+                              </div>
+                              <span class="w-100 text-black-50 font-14 rounded ml-1 font-weight-bold">00:15:08</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <a href="#" rel="nofollow" class="btn btn--brand-2 py-1 px-2 mr-1">
+                              <i class="fas fa-download text-light"></i></a></div>
+                        </div>
+                        <div class="download-item d-flex justify-content-between align-items-center mb-4 pb-3">
+                          <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center ml-2">
+                              <i class="fas fa-film download-item__icon--film"></i>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                              <div class="d-flex flex-wrap">
+                                <h2 class="download-item__title my-0">3
+                                  . قسمت دوم </h2>
+                                <span class="download-item__price mr-2">
+                                  رایگان
+                                </span>
+                              </div>
+                              <span class="w-100 text-black-50 font-14 rounded ml-1 font-weight-bold">00:08:18</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <a href="#" rel="nofollow" class="btn btn--brand-2 py-1 px-2 mr-1">
+                              <i class="fas fa-download text-light"></i></a></div>
+                        </div>
+                        <div class="download-item d-flex justify-content-between align-items-center mb-4 pb-3">
+                          <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center ml-2">
+                              <i class="fas fa-film download-item__icon--film"></i>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                              <div class="d-flex flex-wrap">
+                                <h2 class="download-item__title my-0">4
+                                  . قسمت سوم </h2>
+                                <span class="download-item__price mr-2">
+                                  نقدی
+                                </span>
+                              </div>
+                              <span class="w-100 text-black-50 font-14 rounded ml-1 font-weight-bold">00:06:07</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <a href="#" rel="nofollow" class="btn btn--brand-2 py-1 px-2 mr-1">
+                              <i class="fas fa-download text-light"></i></a></div>
+                        </div>
+                        <div class="download-item d-flex justify-content-between align-items-center mb-4 pb-3">
+                          <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center ml-2">
+                              <i class="fas fa-film download-item__icon--film"></i>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                              <div class="d-flex flex-wrap">
+                                <h2 class="download-item__title my-0">5
+                                  . قسمت چهارم </h2>
+                                <span class="download-item__price mr-2">
+                                  نقدی
+                                </span>
+                              </div>
+                              <span class="w-100 text-black-50 font-14 rounded ml-1 font-weight-bold">00:16:07</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <a href="#" rel="nofollow" class="btn btn--brand-2 py-1 px-2 mr-1">
+                              <i class="fas fa-download text-light"></i></a></div>
+                        </div>
+
+
+                      </div>
+                    </div>
+                  </div> <!-- card -->
+
+                  <div class="card card-accordion bg-transparent">
+                    <div class="card-header card-accordion__header" id="headingFive">
+                      <h2 class="mb-0">
+                        <button class="btn btn-block text-right collapsed shadow-none card-accordion__button"
+                          type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
+                          aria-controls="collapseFive">
+                          فصل اول
+                        </button>
+                      </h2>
+                    </div> <!-- card-header -->
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                      data-parent="#accordionCourseChapter">
+                      <div class="card-body card-accordion__body">
+                        <div class="download-item d-flex justify-content-between align-items-center mb-4 pb-3">
+                          <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center ml-2">
+                              <i class="fas fa-film download-item__icon--film"></i>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                              <div class="d-flex flex-wrap">
+                                <h2 class="download-item__title my-0">1
+                                  . مقدمه </h2>
+                                <span class="download-item__price mr-2">
+                                  رایگان
+                                </span>
+                              </div>
+                              <span class="w-100 text-black-50 font-14 rounded ml-1 font-weight-bold">00:05:08</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <a href="#" rel="nofollow" class="btn btn--brand-2 py-1 px-2 mr-1">
+                              <i class="fas fa-download text-light"></i></a></div>
+                        </div>
+                        <div class="download-item d-flex justify-content-between align-items-center mb-4 pb-3">
+                          <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center ml-2">
+                              <i class="fas fa-film download-item__icon--film"></i>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                              <div class="d-flex flex-wrap">
+                                <h2 class="download-item__title my-0">2
+                                  . قسمت اول </h2>
+                                <span class="download-item__price mr-2">
+                                  رایگان
+                                </span>
+                              </div>
+                              <span class="w-100 text-black-50 font-14 rounded ml-1 font-weight-bold">00:15:08</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <a href="#" rel="nofollow" class="btn btn--brand-2 py-1 px-2 mr-1">
+                              <i class="fas fa-download text-light"></i></a></div>
+                        </div>
+                        <div class="download-item d-flex justify-content-between align-items-center mb-4 pb-3">
+                          <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center ml-2">
+                              <i class="fas fa-film download-item__icon--film"></i>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                              <div class="d-flex flex-wrap">
+                                <h2 class="download-item__title my-0">3
+                                  . قسمت دوم </h2>
+                                <span class="download-item__price mr-2">
+                                  رایگان
+                                </span>
+                              </div>
+                              <span class="w-100 text-black-50 font-14 rounded ml-1 font-weight-bold">00:08:18</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <a href="#" rel="nofollow" class="btn btn--brand-2 py-1 px-2 mr-1">
+                              <i class="fas fa-download text-light"></i></a></div>
+                        </div>
+                        <div class="download-item d-flex justify-content-between align-items-center mb-4 pb-3">
+                          <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center ml-2">
+                              <i class="fas fa-film download-item__icon--film"></i>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                              <div class="d-flex flex-wrap">
+                                <h2 class="download-item__title my-0">4
+                                  . قسمت سوم </h2>
+                                <span class="download-item__price mr-2">
+                                  نقدی
+                                </span>
+                              </div>
+                              <span class="w-100 text-black-50 font-14 rounded ml-1 font-weight-bold">00:06:07</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <a href="#" rel="nofollow" class="btn btn--brand-2 py-1 px-2 mr-1">
+                              <i class="fas fa-download text-light"></i></a></div>
+                        </div>
+                        <div class="download-item d-flex justify-content-between align-items-center mb-4 pb-3">
+                          <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center ml-2">
+                              <i class="fas fa-film download-item__icon--film"></i>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                              <div class="d-flex flex-wrap">
+                                <h2 class="download-item__title my-0">5
+                                  . قسمت چهارم </h2>
+                                <span class="download-item__price mr-2">
+                                  نقدی
+                                </span>
+                              </div>
+                              <span class="w-100 text-black-50 font-14 rounded ml-1 font-weight-bold">00:16:07</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <a href="#" rel="nofollow" class="btn btn--brand-2 py-1 px-2 mr-1">
+                              <i class="fas fa-download text-light"></i></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> <!-- card -->
+
+                  <div class="card card-accordion bg-transparent">
+                    <div class="card-header card-accordion__header" id="headingSix">
+                      <h2 class="mb-0">
+                        <button class="btn btn-block text-right collapsed shadow-none card-accordion__button"
+                          type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false"
+                          aria-controls="collapseSix">
+                          فصل دوم
+                        </button>
+                      </h2>
+                    </div> <!-- card-header -->
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
+                      data-parent="#accordionCourseChapter">
+                      <div class="card-body card-accordion__body">
+                        <div class="download-item d-flex justify-content-between align-items-center mb-4 pb-3">
+                          <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center ml-2">
+                              <i class="fas fa-film download-item__icon--film"></i>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                              <div class="d-flex flex-wrap">
+                                <h2 class="download-item__title my-0">1
+                                  . مقدمه </h2>
+                                <span class="download-item__price mr-2">
+                                  رایگان
+                                </span>
+                              </div>
+                              <span class="w-100 text-black-50 font-14 rounded ml-1 font-weight-bold">00:05:08</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <a href="#" rel="nofollow" class="btn btn--brand-2 py-1 px-2 mr-1">
+                              <i class="fas fa-download text-light"></i></a></div>
+                        </div>
+                        <div class="download-item d-flex justify-content-between align-items-center mb-4 pb-3">
+                          <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center ml-2">
+                              <i class="fas fa-film download-item__icon--film"></i>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                              <div class="d-flex flex-wrap">
+                                <h2 class="download-item__title my-0">2
+                                  . قسمت اول </h2>
+                                <span class="download-item__price mr-2">
+                                  رایگان
+                                </span>
+                              </div>
+                              <span class="w-100 text-black-50 font-14 rounded ml-1 font-weight-bold">00:15:08</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <a href="#" rel="nofollow" class="btn btn--brand-2 py-1 px-2 mr-1">
+                              <i class="fas fa-download text-light"></i></a></div>
+                        </div>
+                        <div class="download-item d-flex justify-content-between align-items-center mb-4 pb-3">
+                          <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center ml-2">
+                              <i class="fas fa-film download-item__icon--film"></i>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                              <div class="d-flex flex-wrap">
+                                <h2 class="download-item__title my-0">3
+                                  . قسمت دوم </h2>
+                                <span class="download-item__price mr-2">
+                                  رایگان
+                                </span>
+                              </div>
+                              <span class="w-100 text-black-50 font-14 rounded ml-1 font-weight-bold">00:08:18</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <a href="#" rel="nofollow" class="btn btn--brand-2 py-1 px-2 mr-1">
+                              <i class="fas fa-download text-light"></i></a></div>
+                        </div>
+                        <div class="download-item d-flex justify-content-between align-items-center mb-4 pb-3">
+                          <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center ml-2">
+                              <i class="fas fa-film download-item__icon--film"></i>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                              <div class="d-flex flex-wrap">
+                                <h2 class="download-item__title my-0">4
+                                  . قسمت سوم </h2>
+                                <span class="download-item__price mr-2">
+                                  نقدی
+                                </span>
+                              </div>
+                              <span class="w-100 text-black-50 font-14 rounded ml-1 font-weight-bold">00:06:07</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <a href="#" rel="nofollow" class="btn btn--brand-2 py-1 px-2 mr-1">
+                              <i class="fas fa-download text-light"></i></a></div>
+                        </div>
+                        <div class="download-item d-flex justify-content-between align-items-center mb-4 pb-3">
+                          <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center ml-2">
+                              <i class="fas fa-film download-item__icon--film"></i>
+                            </div>
+                            <div class="d-flex align-items-center flex-column">
+                              <div class="d-flex flex-wrap">
+                                <h2 class="download-item__title my-0">5
+                                  . قسمت چهارم </h2>
+                                <span class="download-item__price mr-2">
+                                  نقدی
+                                </span>
+                              </div>
+                              <span class="w-100 text-black-50 font-14 rounded ml-1 font-weight-bold">00:16:07</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <a href="#" rel="nofollow" class="btn btn--brand-2 py-1 px-2 mr-1">
+                              <i class="fas fa-download text-light"></i></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> <!-- card -->
+                </div> <!-- accordion -->
+
+              </div> <!-- chapter -->
+
+            </div>
+          </div> <!-- card -->
+
+          <div class="card card-course bg--brand">
+            <div class="card-header bg-transparent d-flex align-items-center">
+              <i class="far fa-comment-alt ml-2 card-header__comment--icon"></i>
+              <h5 class="card-header__comment--title">نظرات </h5>
+            </div>
+
+            <div class="card-body d-flex justify-content-center flex-column">
+              <form action="#" id="comment-form" class="d-flex flex-column flex-grow-1">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputCommentName" class="font-weight-bold">نام شما *</label>
+                    <input type="password" class="form-control bg--input mt-2" id="inputCommentName"
+                      placeholder="مثال: میلاد شهسواری">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputCommentEmail" class="font-weight-bold">ایمیل شما</label>
+                    <input type="email" class="form-control bg--input mt-2 text-left" id="inputCommentEmail"
+                      placeholder="example@company.com" autocomplete="off">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputCommentText" class="font-weight-bold">نظر شما *</label>
+                  <textarea class="form-control bg--input mt-2" id="inputCommentText" rows="7"
+                    placeholder="نظر خود را اینجا بنویسید"></textarea>
+                </div>
+                <button type="submit" class="btn btn--brand-2">ارسال نظر</button>
+              </form>
+
+              <div class="comment-list mt-4">
+                <div class="card comment-list__item bg--brand mb-3">
+                  <div
+                    class="card-header bg-transparent d-flex justify-content-between align-items-center py-2 border-0">
+                    <div class="d-flex align-items-center">
+                      <div class="comment-list__img">
+                        <img src="assets/images/avatar/girl.svg" class="w-100" alt="">
+                      </div>
+                      <div class="comment-list__title mr-2">
+                        <h5 class="mb-2">زهرا</h5>
+                        <small class="font-weight-bold">1400/02/31</small>
+                      </div>
+                    </div>
+
+                    <div class="comment-list__reply">
+                      <a href="#" class="btn btn--brand px-3 py-1 comment-list__reply--btn">پاسخ</a>
+                    </div>
+                  </div>
+
+                  <div class="card-body comment-list__text pt-0 pb-4">
+                    <p>سلام خیلی ممنون دوره خوبی بود</p>
+                  </div>
+                </div>
+                <div class="card comment-list__item bg--brand mb-3">
+                  <div
+                    class="card-header bg-transparent d-flex justify-content-between align-items-center py-2 border-0">
+                    <div class="d-flex align-items-center">
+                      <div class="comment-list__img">
+                        <img src="assets/images/avatar/man.svg" class="w-100" alt="">
+                      </div>
+                      <div class="comment-list__title mr-2">
+                        <h5 class="mb-2">علی</h5>
+                        <small class="font-weight-bold">1400/01/21</small>
+                      </div>
+                    </div>
+
+                    <div class="comment-list__reply">
+                      <a href="#" class="btn btn--brand px-3 py-1 comment-list__reply--btn">پاسخ</a>
+                    </div>
+                  </div>
+
+                  <div class="card-body comment-list__text pt-0 pb-4">
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                      چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی
+                      مورد
+                      نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
+
+                    <div class="card comment-list__item bg--brand mt-3">
+                      <div
+                        class="card-header bg-transparent d-flex justify-content-between align-items-center py-2 border-0">
+                        <div class="d-flex align-items-center">
+                          <div class="comment-list__img">
+                            <img src="assets/images/avatar/man-2.svg" class="w-100" alt="">
+                          </div>
+                          <div class="comment-list__title mr-2">
+                            <h5 class="mb-2">مدیریت</h5>
+                            <small class="font-weight-bold">1400/02/12</small>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="card-body comment-list__text pt-0 pb-4">
+                        <p>ممنون از نظر شما</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card comment-list__item bg--brand mb-3">
+                  <div
+                    class="card-header bg-transparent d-flex justify-content-between align-items-center py-2 border-0">
+                    <div class="d-flex align-items-center">
+                      <div class="comment-list__img">
+                        <img src="assets/images/avatar/man-3.svg" class="w-100" alt="">
+                      </div>
+                      <div class="comment-list__title mr-2">
+                        <h5 class="mb-2">محمد</h5>
+                        <small class="font-weight-bold">1400/03/05</small>
+                      </div>
+                    </div>
+
+                    <div class="comment-list__reply">
+                      <a href="#" class="btn btn--brand px-3 py-1 comment-list__reply--btn">پاسخ</a>
+                    </div>
+                  </div>
+
+                  <div class="card-body comment-list__text pt-0 pb-4">
+                    <p>سلام دوره خوبی بود</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section> <!-- col-8 -->
+
+      </section>
+    </div>
+
+  </main>
+  <!--======== ↑ End Main ↑ ========-->
+
+
+  <!--======= ↓ Start Footer  ↓ =======-->
+  <a class="btn btn--brand back-to-top rounded-circle">
+    <i class="fas fa-chevron-up"></i>
+  </a> <!-- Scroll To Top -->
+
+  <footer id="main-footer">
+    <div class="container ">
+      <div class="row py-5">
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="footer__widgets--title pb-3 d-flex align-items-center">درباره آکادمی</h5>
+          <p class="text-justify footer__widgets--text">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
+            با استفاده از طراحان گرافیک است. چاپگرها و متون
+            بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع
+            با هدف بهبود ابزارهای کاربردی می باشد.</p>
+        </div> <!-- col-lg-3 -->
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="footer__widgets--title pb-3 d-flex align-items-center">تماس با آکادمی</h5>
+
+          <ul class="text-break">
+            <li class="d-flex align-items-end mb-1 footer__widgets--link p-2">
+              <i class="fas fa-mobile-alt ml-1"></i>
+              <a href="">0912345678</a>
+            </li>
+            <li class="d-flex align-items-end mb-1 footer__widgets--link p-2">
+              <i class="far fa-envelope ml-1"></i>
+              <a href="mailto:miladshahsavari1@gmail.com">miladshahsavari1@gmail.com</a>
+            </li>
+            <li class="d-flex align-items-end mb-1 footer__widgets--link p-2">
+              <i class="fab fa-chrome ml-1"></i>
+              <a href="http://miladshahsavari.ir">www.miladshahsavari.ir</a>
+            </li>
+
+          </ul>
+
+          <div class="w-75 mx-auto mt-4">
+
+            <ul class="d-flex justify-content-between">
+              <li class="d-flex align-items-center justify-content-between">
+                <a href="#!" class="footer__widgets--link btn btn--brand rounded-pill d-flex p-2"><i
+                    class="fab fa-instagram footer__widgets--icon"></i></a>
+              </li>
+
+              <li class="d-flex align-items-center justify-content-between">
+                <a href="#!" class="footer__widgets--link btn btn--brand rounded-pill d-flex p-2"><i
+                    class="fab fa-telegram-plane footer__widgets--icon"></i></a>
+              </li>
+
+              <li class="d-flex align-items-center justify-content-between">
+                <a href="#!" class="footer__widgets--link btn btn--brand rounded-pill d-flex p-2"> <i
+                    class="fab fa-facebook footer__widgets--icon"></i></a>
+              </li>
+
+              <li class="d-flex align-items-center justify-content-between">
+                <a href="#!" class="footer__widgets--link btn btn--brand rounded-pill d-flex p-2"> <i
+                    class="fab fa-twitter footer__widgets--icon"></i></a>
+              </li>
+            </ul>
+
+          </div>
+        </div> <!-- col-lg-3 -->
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="footer__widgets--title pb-3 d-flex align-items-center">دسترسی سریع</h5>
+          <ul>
+            <li class="mb-1">
+              <a href="" class="footer__widgets--link d-flex align-items-center p-2">آموزش طراحی سایت</a>
+            </li>
+            <li class="mb-1">
+              <a href="" class="footer__widgets--link d-flex align-items-center p-2">دوره ها</a>
+            </li>
+            <li class="mb-1">
+              <a href="" class="footer__widgets--link d-flex align-items-center p-2">قوانین و مقررات</a>
+            </li>
+            <li class="mb-1">
+              <a href="" class="footer__widgets--link d-flex align-items-center p-2">مقالات</a>
+            </li>
+          </ul>
+        </div> <!-- col-lg-3 -->
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <form action="index.html">
+            <h5 class="footer__widgets--title pb-3 d-flex align-items-center">خبرنامه</h5>
+            <p class="footer__widgets--text">برای دریافت آخرین اخبار و تخفیف های آکادمی در خبرنامه عضو شوید</p>
+
+            <div class="input-group my-2">
+              <input class="form-control bg--input px-3 py-3 footer__widgets--input"
+                placeholder="ایمیل خود را وارد کنید" type="email">
+              <div class="input-group-prepend ">
+                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+              </div>
+              <!-- <input type="email" class="form-control my-2 bg--input px-3 py-3" placeholder="ایمیل خود را وارد کنید"> -->
+            </div>
+
+            <input type="submit" class="btn btn-block py-1 btn--brand" value="عضویت">
+          </form>
+        </div> <!-- col-lg-3 -->
+
+      </div> <!-- row -->
+
+      <div class="row">
+        <div class="main-footer__copyright col-12 text-center py-3 text-muted">
+          <p>تمامی حقوق برای این وب سایت محفوظ می باشد</p>
+          <p class="pt-2">طراحی شده توسط <a href="http://miladshahsavari.ir/" target="_blank">میلاد شهسواری</a></p>
+        </div>
+      </div>
+    </div> <!-- container -->
+  </footer> <!-- main-footer -->
+
+  <!--======== ↑ End Footer  ↑ ========-->
+
+
+  <!--================== ↓ Start Scripts ↓ ==================-->
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/fontawesome.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  <!--================== ↑ End Scripts ↑ ==================-->
+
+</body>
+
+</html>
