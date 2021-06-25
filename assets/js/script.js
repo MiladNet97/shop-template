@@ -1,3 +1,9 @@
+let path = window.location.href;
+$('ul a').each(function () {
+  if (this.href === path) {
+    $(this).parent().addClass('active');
+  }
+});
 /* =================================================================
                 [ Mobile Menu ]
 ==================================================================*/
@@ -227,10 +233,6 @@ class Message {
         
         `
     const cartMessage = document.querySelector('.cart-message');
-    // const cartMessage = document.createElement('div');
-    // cartMessage.classList.add('cart-message');
-    // const header = document.querySelector('header');
-    // document.querySelector('body').insertBefore(cartMessage, header)
 
     if (!document.querySelector(`.${className}`)) {
       cartMessage.appendChild(div)
@@ -251,18 +253,18 @@ const courseBtn = document.querySelector('.course-info__sell--button'),
   navbarBasket = document.querySelector('.navbar__basket'),
   message = new Message();
 
-navbarBasket.addEventListener('mouseover', () => {
-  if (shoppingCartBody.innerHTML.length === 0) {
-    shoppingCartContent.style.visibility = 'hidden'
-  } else {
-    shoppingCartContent.style.visibility = 'visible'
-  }
-})
-navbarBasket.addEventListener('mouseout', () => {
-  shoppingCartContent.style.visibility = 'hidden'
-})
 
 try {
+  navbarBasket.addEventListener('mouseover', () => {
+    if (shoppingCartBody.innerHTML.length === 0) {
+      shoppingCartContent.style.visibility = 'hidden'
+    } else {
+      shoppingCartContent.style.visibility = 'visible'
+    }
+  })
+  navbarBasket.addEventListener('mouseout', () => {
+    shoppingCartContent.style.visibility = 'hidden'
+  })
   // adding the course to the shopping cart 
   courseBtn.addEventListener('click', (e) => {
     e.preventDefault()
@@ -317,84 +319,82 @@ try {
 
 
   })
-} catch (error) {}
 
-// add to localstorage
-const saveToStorage = (course) => {
-  // get array of courses from storage
-  let courses = getFromStorage()
+  // add to localstorage
+  const saveToStorage = (course) => {
+    // get array of courses from storage
+    let courses = getFromStorage()
 
-  // add the new course to the array of courses
-  courses.push(course)
+    // add the new course to the array of courses
+    courses.push(course)
 
-  localStorage.setItem('courses', JSON.stringify(courses))
-}
-
-// get content from storage
-function getFromStorage() {
-  let courses;
-
-  // if courses exist before
-  if (localStorage.getItem('courses')) {
-    courses = JSON.parse(localStorage.getItem('courses'))
-  } else {
-    courses = []
+    localStorage.setItem('courses', JSON.stringify(courses))
   }
 
-  return courses
-}
+  // get content from storage
+  function getFromStorage() {
+    let courses;
 
-// remove course from the shopping cart
-shoppingCartBody.addEventListener('click', (e) => {
-  if (e.target.classList.contains('navbar__basket--content-remove')) {
-
-    e.target.closest(".navbar__basket--content-item").remove();
-    const shoppingCartItem = document.querySelectorAll(".navbar__basket--content-item").length;
-    shoppingCartCount.innerHTML = shoppingCartItem + ' محصول';
-    document.querySelector('.navbar__basket--count').innerHTML = shoppingCartItem
-
-    if (shoppingCartItem === 0) {
-      shoppingCartCount.innerHTML = ''
-      document.querySelector('.navbar__basket--count').innerHTML = '';
-      shoppingCartContent.style.visibility = 'hidden'
+    // if courses exist before
+    if (localStorage.getItem('courses')) {
+      courses = JSON.parse(localStorage.getItem('courses'))
+    } else {
+      courses = []
     }
 
-    course = e.target.closest(".navbar__basket--content-item");
-    courseId = course.querySelector('.navbar__basket--content-remove').getAttribute('data-id');
+    return courses
   }
 
-  // remove course from LS
-  removeCourseLS(courseId)
+  // remove course from the shopping cart
+  shoppingCartBody.addEventListener('click', (e) => {
+    if (e.target.classList.contains('navbar__basket--content-remove')) {
 
-  courseTitle = course.querySelector('.navbar__basket--content-title p').textContent;
-  message.showAlert('danger', `دوره ${courseTitle} از سبد خرید حذف شد`)
+      e.target.closest(".navbar__basket--content-item").remove();
+      const shoppingCartItem = document.querySelectorAll(".navbar__basket--content-item").length;
+      shoppingCartCount.innerHTML = shoppingCartItem + ' محصول';
+      document.querySelector('.navbar__basket--count').innerHTML = shoppingCartItem
 
-})
+      if (shoppingCartItem === 0) {
+        shoppingCartCount.innerHTML = ''
+        document.querySelector('.navbar__basket--count').innerHTML = '';
+        shoppingCartContent.style.visibility = 'hidden'
+      }
 
-// remove course from local storage
-const removeCourseLS = (id) => {
-  let coursesLS = getFromStorage()
-
-  coursesLS.forEach(function (course, index) {
-    if (course.id === id) {
-      coursesLS.splice(index, 1)
+      course = e.target.closest(".navbar__basket--content-item");
+      courseId = course.querySelector('.navbar__basket--content-remove').getAttribute('data-id');
     }
-  });
 
-  localStorage.setItem('courses', JSON.stringify(coursesLS))
-}
+    // remove course from LS
+    removeCourseLS(courseId)
 
+    courseTitle = course.querySelector('.navbar__basket--content-title p').textContent;
+    message.showAlert('danger', `دوره ${courseTitle} از سبد خرید حذف شد`)
 
-// show courses when document loaded and add courses into the cart
-document.addEventListener('DOMContentLoaded', (e) => {
-  let coursesLS = getFromStorage();
+  })
 
-  // add courses into the cart
-  coursesLS.forEach(function (courseInfo) {
-    // create li tag for add course to shopping cart
-    const li = document.createElement('li');
-    li.classList.add('navbar__basket--content-item', 'text-right', 'mb-2');
-    li.innerHTML = `
+  // remove course from local storage
+  const removeCourseLS = (id) => {
+    let coursesLS = getFromStorage()
+
+    coursesLS.forEach(function (course, index) {
+      if (course.id === id) {
+        coursesLS.splice(index, 1)
+      }
+    });
+
+    localStorage.setItem('courses', JSON.stringify(coursesLS))
+  }
+
+  // show courses when document loaded and add courses into the cart
+  document.addEventListener('DOMContentLoaded', (e) => {
+    let coursesLS = getFromStorage();
+
+    // add courses into the cart
+    coursesLS.forEach(function (courseInfo) {
+      // create li tag for add course to shopping cart
+      const li = document.createElement('li');
+      li.classList.add('navbar__basket--content-item', 'text-right', 'mb-2');
+      li.innerHTML = `
       <a href="cart.html" class="d-flex align-items-center flex-column">
         <div class="d-flex">
           <div class="navbar__basket--content-img">
@@ -413,12 +413,13 @@ document.addEventListener('DOMContentLoaded', (e) => {
         </div>
       </a>
   `
-    // append li tag to shopping cart
-    shoppingCartBody.appendChild(li)
+      // append li tag to shopping cart
+      shoppingCartBody.appendChild(li)
 
 
-    const shoppingCartItem = document.querySelectorAll(".navbar__basket--content-item").length;
-    shoppingCartCount.innerHTML = shoppingCartItem + ' محصول';
-    document.querySelector('.navbar__basket--count').innerHTML = shoppingCartItem;
-  });
-})
+      const shoppingCartItem = document.querySelectorAll(".navbar__basket--content-item").length;
+      shoppingCartCount.innerHTML = shoppingCartItem + ' محصول';
+      document.querySelector('.navbar__basket--count').innerHTML = shoppingCartItem;
+    });
+  })
+} catch (error) {}
