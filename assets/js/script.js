@@ -4,6 +4,15 @@ $('ul a').each(function () {
     $(this).parent().addClass('active');
   }
 });
+
+/* =================================================================
+                        [ Preloader ]
+==================================================================*/
+window.onload = function () {
+  document.querySelector('.spinner__box').style.setProperty("display", "none", "important");
+  document.body.classList.remove('overflow-hidden')
+}
+
 /* =================================================================
                 [ Mobile Menu ]
 ==================================================================*/

@@ -24,7 +24,14 @@
   <link rel="icon" href="assets/images/favicon.png">
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100 overflow-hidden">
+  <!-- spinner__box -->
+  <div class="spinner__box min-vh-100 d-flex justify-content-center align-items-center w-100 position-fixed">
+    <div class="spinner__border">
+      <div class="spinner__core"></div>
+    </div>
+  </div>
+  <!-- end spinner__box -->
   <div class="cart-message"></div>
   <!--======= ↓ Start Header ↓ =======-->
   <header id="main-header">

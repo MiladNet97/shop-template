@@ -23,7 +23,14 @@
   <link rel="icon" href="assets/images/favicon.png">
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100 overflow-hidden">
+  <!-- spinner__box -->
+  <div class="spinner__box min-vh-100 d-flex justify-content-center align-items-center w-100 position-fixed">
+    <div class="spinner__border">
+      <div class="spinner__core"></div>
+    </div>
+  </div>
+  <!-- end spinner__box -->
   <div class="cart-message"></div>
   <!--======= ↓ Start Header ↓ =======-->
   <header id="main-header">
@@ -169,8 +176,7 @@
               </div>
               <div class="card-body">
                 <div class="list-group">
-                  <a href="#"
-                    class="list-group-item bg-transparent sidebar__item p-1 d-flex align-items-center mb-1">
+                  <a href="#" class="list-group-item bg-transparent sidebar__item p-1 d-flex align-items-center mb-1">
                     <div class="ml-2">
                       <img src="assets/images/posts/post1.png" class="sidebar__img" alt="">
                     </div>
@@ -179,8 +185,7 @@
                       <span class="sidebar__date">1400/03/05</span>
                     </div>
                   </a>
-                  <a href="#"
-                    class="list-group-item bg-transparent sidebar__item p-1 d-flex align-items-center mb-1">
+                  <a href="#" class="list-group-item bg-transparent sidebar__item p-1 d-flex align-items-center mb-1">
                     <div class="ml-2">
                       <img src="assets/images/posts/post2.png" class="sidebar__img" alt="">
                     </div>
@@ -189,8 +194,7 @@
                       <span class="sidebar__date">1400/02/13</span>
                     </div>
                   </a>
-                  <a href="#"
-                    class="list-group-item bg-transparent sidebar__item p-1 d-flex align-items-center mb-1">
+                  <a href="#" class="list-group-item bg-transparent sidebar__item p-1 d-flex align-items-center mb-1">
                     <div class="ml-2">
                       <img src="assets/images/posts/post3.png" class="sidebar__img" alt="">
                     </div>
@@ -199,8 +203,7 @@
                       <span class="sidebar__date">1400/03/09</span>
                     </div>
                   </a>
-                  <a href="#"
-                    class="list-group-item bg-transparent sidebar__item p-1 d-flex align-items-center mb-1">
+                  <a href="#" class="list-group-item bg-transparent sidebar__item p-1 d-flex align-items-center mb-1">
                     <div class="ml-2">
                       <img src="assets/images/posts/post5.png" class="sidebar__img" alt="">
                     </div>

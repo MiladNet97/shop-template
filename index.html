@@ -24,8 +24,17 @@
   <link rel="icon" href="assets/images/favicon.png">
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+
+<body class="d-flex flex-column min-vh-100 overflow-hidden">
+  <!-- spinner__box -->
+  <div class="spinner__box min-vh-100 d-flex justify-content-center align-items-center w-100 position-fixed">
+    <div class="spinner__border">
+      <div class="spinner__core"></div>
+    </div>
+  </div>
+  <!-- end spinner__box -->
   <div class="cart-message"></div>
+
   <!--======= ↓ Start Header ↓ =======-->
   <header id="main-header">
     <!-- header shape -->
@@ -160,7 +169,8 @@
           <div class="col-lg-3 col-md-6 col-xs-12 mb-3">
             <div class="card p-0 bg--brand border-0">
               <a href="singleProduct.html">
-                <img src="assets/images/courses/course1.png" class="card-img-top courses__list--img" alt="course" loading="lazy">
+                <img src="assets/images/courses/course1.png" class="card-img-top courses__list--img" alt="course"
+                  loading="lazy">
                 <div class="card-body courses__list--body py-2">
                   <h2 class="card-title courses__list--h2">بهترین زبان های برنامه نویسی برای یادگیری در سال 2021</h2>
                 </div>
